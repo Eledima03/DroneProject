@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chart.js</title>
+  <link rel="stylesheet" href="/css/chart.css">
+  <link rel="stylesheet" href="/css/components.css">
+
+</head>
+
+<body>
+   <header class="header">
+      <div class="header__content">
+        <a class="header__logo" href="">
+          <strong>FEA</strong>
+        </a>
+        <ul class="header__menu">
+          <li><a href="index">Home</a></li>
+          <li><a href="#Aboutus">About Us</a></li>
+          <li><a href="#Assembled">Assembling Drones</a></li>
+          <li><a href="#Orders">Orders</a></li>
+          <li><a href="#Reviews">Reviews</a></li>
+  
+          <% if(!user) {%>
+            <li><a href="components">Components</a></li>
+            <% } %>
+  
+  
+  
+              <% if (user) { %>
+                <li><a href="add" id="add">Add</a></li>
+                <% } %>
+                  <% if (user) { %>
+                    <li><a href="order" id="order">Your Orders</a></li>
+                    <% } %>
+  
+                      <% if (user) {%>
+                        <li> <a href="statistic">Statistic</a></li>
+                        <% }%>
+                          <% if (user) { %>
+                            <li><a href="logout" id="logout">logout</a></li>
+                            <% } %>
+  
+  
+  
+  
+        </ul>
+  
+  <div class="container">
+    <canvas id="chartId" aria-label="chart" height="350" width="580"></canvas>
+    
+    <h1></h1>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
+  <script>
+    var chrt = document.getElementById("chartId").getContext("2d");
+
+    // Access data from EJS template using JavaScript
+    const wing1  =  '<%=wing1%>'
+    const engine1 = '<%=engine1%>'  
+    const battery1 =  '<%=battery1%>'
+    const wing2  =  '<%=wing2%>'
+    const engine2 = '<%=engine2%>'  
+    const battery2 =  '<%=battery2%>'
+    const wing3  =  '<%=wing3%>'
+    const engine3 = '<%=engine3%>'  
+    const battery3 =  '<%=battery3%>'
+    const wing4  =  '<%=wing4%>'
+    const engine4 = '<%=engine4%>'  
+    const battery4 =  '<%=battery4%>'
+    var chartId = new Chart(chrt, {
+      type: 'doughnut',
+      data: {
+        labels: ["Wing1", "Wing2","Wing3","Wing4","Engine1", "Engine2","Engine3","Engine4"
+        ,"Battery1","Battery2","Battery3","Battery4"],
+        datasets: [{
+          label: "Component Distribution",
+          data: [wing1, wing2,wing3,wing4,engine1,engine2,engine3,engine4 ,battery1, battery2, battery3, battery4],
+          backgroundColor: ['yellow', 'aqua', 'pink', 'lightgreen', 'gold', 'lightblue','green','blue','grey','orange','red','black'],
+          hoverOffset: 5
+        }],
+      },
+      options: {
+        responsive: false,
+      },
+    });
+  </script>
+</body>
+
+</html>

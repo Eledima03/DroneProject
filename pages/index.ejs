@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FEA drones</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/components.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header__content">
+      <a class="header__logo" href="">
+        <strong>FEA</strong>
+      </a>
+      <ul class="header__menu">
+        <li><a href="index">Home</a></li>
+        <li><a href="#Aboutus">About Us</a></li>
+        <li><a href="#Assembled">Assembling Drones</a></li>
+        <li><a href="#Orders">Orders</a></li>
+        <li><a href="#Reviews">Reviews</a></li>
+
+        <% if(!user) {%>
+          <li><a href="components">Components</a></li>
+          <% } %>
+
+
+
+            <% if (user) { %>
+              <li><a href="add" id="add">Add</a></li>
+              <% } %>
+                <% if (user) { %>
+                  <li><a href="order" id="order">Your Orders</a></li>
+                  <% } %>
+
+                    <% if (user) {%>
+                      <li> <a href="statistic">Statistic</a></li>
+                      <% }%>
+                        <% if (user) { %>
+                          <li><a href="logout" id="logout">logout</a></li>
+                          <% } %>
+
+
+
+
+      </ul>
+
+      <div class="header__quick">
+        <% if (!user) { %>
+          <a href="login" id="loginLink">Sign up/Login</a>
+          <% } %>
+            <div class="icon-hamburger">
+              <span></span>
+              <span></span>
+            </div>
+      </div>
+
+    </div>
+  </header>
+
+  <div class="cover" id="cover">
+    <div class="cover__content">
+      <h1> FEA </h1>
+      <h2> Drones assembly </h2>
+      <a href="" class="button" id="assembleButton" <% if (!user) { %>style="display: none;"<% } %>
+          disabled>Assemble</a>
+      <!--I would like this button to appear only after the login, with "Assemble written on it"-->
+    </div>
+  </div>
+
+  <div class="spacer"></div>
+
+  <div class="grid">
+    <div class="col-50">
+      <h1>FEA drones</h1>
+    </div>
+    <div class="col-100">
+      <p>
+        Founded by passionate engineers and tech enthusiasts, FEA has grown into a leading company in the drone
+        industry. Our team of experts is dedicated to pushing the boundaries of drone technology. <br> <br>
+        We specialize in providing both fully assembled drones and a wide range of high-quality components for DIY
+        enthusiasts. Whether you're a hobbyist or a professional, we have the products and expertise to help you achieve
+        your goals. <br>
+      </p>
+    </div>
+  </div> <br>
+
+  <div class="grid">
+    <div class="col-50" id="Aboutus">
+      <div class="spacer"></div>
+      <h1>About Us</h1>
+      <p> At FEA, our mission is to revolutionize how people interact with technology by providing state-of-the-art,
+        customizable drones.
+      </p>
+      <p>Our values are rooted in innovation, incorporating the latest technologies into our products, and ensuring
+        quality by
+        delivering high-performance, durable products. We prioritize customer satisfaction by offering comprehensive
+        support
+        and resources and are committed to sustainability through environmentally friendly practices. Choosing us means
+        you can
+        customize and design a drone that suits your needs, receive expert support for assembly and operation, and join
+        a
+        vibrant community of drone enthusiasts.
+      </p>
+    </div>
+    <div class="col-50">
+      <div class="cover">
+        <img src="/images/drone6.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="col-50">
+      <div class="cover">
+        <img src="/images/drone7.jpg" alt="">
+      </div>
+    </div>
+    <div class="col-50" id="Assembled">
+      <div class="spacer"></div>
+      <h1>Assembling Drones</h1>
+      <p>At FEA, our values are deeply rooted in innovation, quality, customer satisfaction, and sustainability. We
+        integrate
+        the latest technologies into our products, ensuring they are high-performance and durable. Our commitment to
+        customer
+        satisfaction is reflected in the comprehensive support and resources we provide. Additionally, we are dedicated
+        to
+        environmentally friendly practices. </p>
+      <p>Choosing us means you can enjoy the experience of assembling your own drone with our easy-to-follow guides and
+        expert
+        support. Our extensive range of components allows you to design and customize a drone that perfectly fits your
+        needs.
+        By joining FEA, you become part of a vibrant community of drone enthusiasts, sharing knowledge and passion for
+        cutting-edge drone technology. </p>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="col-50" id="Orders">
+      <div class="spacer"></div>
+      <h1>Orders</h1>
+    </div>
+    <div class="col-100">
+      <p>Here are a few examples of assembled drones:</p>
+    </div>
+
+    <div class="col-50">
+      <p> <b> Sofia's Marine Exploration Drone</b>
+        Sofia has designed a drone ideal for exploring the most remote underwater depths. Equipped with a
+        high-definition underwater
+        camera and quick-release folding propellers, this drone offers reliable performance and easy maneuverability.
+        <br> <br>
+        Components: <br>
+        - COMANCHE III HD PRO Frame - $79.90 <br>
+        - Intelligent Flight Battery 3.0 - $139 <br>
+        - Propellers for DJI Avata 2 (pair) - $9 <br> <br>
+      <div class="imgorders">
+        <img
+          src="data:image/jpeg;base64,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">
+      </div>
+      </p>
+    </div>
+    <div class="col-50">
+      <p> <b>Luca's Racing Drone</b>
+        Luca has assembled a high-performance racing drone, optimizing each component for maximum speed and
+        maneuverability. The enhanced propellers ensure powerful and stable thrust, while the lightweight frame
+        guarantees unparalleled agility.
+        <br> <br>
+        Components: <br>
+        - iFlight TITAN DC5 V1.4 HD Frame - $89.99 <br>
+        - Mini Intelligent Flight Battery - $69 <br>
+        - Enhanced Propellers - $15 <br> <br>
+      <div class="imgorders">
+        <img
+          src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIREhUSExIWFRUVFRUYFhYVFRgVFRcVGhUWGBcZGhkZHSogGhomHRgXIjEhJSkrLi4uFyAzODMsOSgtLisBCgoKDg0OFxAQGi0lIB8vKy4rLSstLSstKy0tNy0tNy0tLS0tLS0tLS0rLS03LSstLS0tLS0tLS0tLS0tLS4tLf/AABEIAKEBOAMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABgECBAUHAwj/xABFEAACAQIDBQUFBQUGBQUBAAABAgADEQQSIQUGMUFRBxMiYXEyQoGRoRRyscHRI1JigrIVM5KiwuFTY3PS8ENEk7PxJP/EABkBAQEBAQEBAAAAAAAAAAAAAAABAgMFBP/EACgRAQEAAgIBAwMDBQAAAAAAAAABAhEDITEEEkETIlFhkbEFJIHB0f/aAAwDAQACEQMRAD8A7jERAREQEREBERAREQEREBERAREQEREBERATnO/m9mTFDCpWKd2gaoEJDNUfVEuNRZbG3POJNq1c5iAeciG+G6FHHKwSnSXE1CD35UZvCB7TAZrZRb4CfJPWYe/2a+dOn0rra/sq3hxGLXELWJdaTpkc+14gxKE88uVTc6+P0k8mi3M3cTZ2GFBWzMWL1HtbM5tc26WAHwm9n1uZERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQERKML6QOZneaqSTn0JJGiaAnTjztN1uVtKpiK1UPqKSrZuBu99LDT3TrOa7PwKtXrAYmpko1GCIXYtVp56iq11ICgBUvYa5hOubl7B+yUTdy7VSHJPIEDKgPMDXU8bmc7x8Xu6xm527XDOcczt6u4kMRE6OJERAREQEREBERAREQESmYXtzlYCIiAiIgIiICIiAiIgIiICIiAiIgIiY9DG03YqrgsL3HA6WBIvxAJAuNLwMiJZUqKouxAHUmw+sxW2nT5Et90Ej58PrAzYmu/tFj7NP/ABG30F/xlyvVbmB6D9by6GfNft/atPCYepXqMFCjS/NzoijzLED4z3o0WGpYn1N5zftY3goYjCdxRqB2FZWYgggLSJLcDceIKBcC/EXtIIPuzUFOhXqk6qqqfLKgbj5l/pO17jYZ6eBoK5NyuYA+6rEsq/AEfWcHwDF8Hi6WbUmy3/ipp9L3mZhsdVTCU6LYpza+XMWWnTOmjWvnXmCAcuutiAOeOP35V6HqeX+34uOfjf8AL6KlCbamQ/srrYl8CGxOY3du7Lm7GlYW1PEXvYyYMoOhFx5zo89gttakP3j6KTLf7bo8yw9ab/8AbMh8Ch5W9D+XCYtXZQ5H56fUfpL0Kjb2H/4lvVWH4iX09tYZjYYilfp3i3+V5rcTs5lBOUn7uv04/SaCulUk5cNWYj/llPq+UfWBJ94t4qODCZ2UNUJyAmwsuXOxIBsAGHLiQOc9N3du0sbTZ6R9hzTcW4OApI14izAg9DPn3fDagr1VFSmRRTMqU2IsKhyl2HdOAQbKL3I8J53t67j7a+z1mRMY2Eo1AC9qdSsCwIF1U3ZWI98m1hz0EVZLbqPo6tWVBdmCjqxAHzM1rbyYa9kc1je1qCPXsfM0wQvxImLsbYuDdFrA/as2oq1W72/z8IN78ALTfqoAsBYDkOEiNR9vxVT+7wmT+LEVVTTqFpZyfQ5ZadlYip/fYtgP3MMgoKR5uS1T4qyzdRAw9nbLo0L92gUtbMxJZ3twzuxLMfMkzMiICIiAiIgIiICIiAiIgIiICIiBjYrCZyCKjoRzRrf5SCp+UxzhMQPYxAP/AFaQb+gpNjECO46vtOnqtHDV155Kj0aluoDBlJ/mE4Hs/eCrg3Wsj1O+XMEViDSUWW6kFczAgj3tL3twM7P2lb3rgqXdob1mBsqmxtpqTyGo+c+fHVq1TPVctmOeobFrLc5ibagAC1+VpVk38u07sb2Jj6llSrUq62DvQViLXJRTUBy/dFpPcJg24soXyJufpp9ZwHd/C1MJicPXc92ErKFF7u9w41UeyrWGl+fAT6Sk7XL27+15JhwPP/zpPUCJo96t4lwVMNlNR2vlReNhxY/wi489RDLV9om8Rw9E0aetWop4EAqmoJBOgLeyCfM8pxWsSwY3ptURjfJUcIqgkX4i/C9jY+VxabbebaQrVnr1KlXxOoVQVQsbqAuUXP8ACAG0HE3mvYDvVHeVL+JiMwFPW+UWFuQOlzexN7aTQ8O7eqqkFbgkFsjEAcRkVxqdRr5TLwOzRi8dh8E57taozXK3DLaobAXGh7tlvw15zK+yqiO7UxmaxFUu2YAnMQAdOGlhYAEeV9tvHWFPG7DxyABalGghy+yAjpmA/lrMPhA7hERMhERASGdreIqU9nVDTvqyK1uaXJYehAsRzF5MiZDt/Ns4N8JXpNiEzquZVBDFnGqqBzJIt5XhZdXb51rVGesDf3VXoAMgvYepPzM2BwlQn9mhZrDRQSeJ5DiP1nmzK1YMwAZyGIPEFlBt+WvSbWnvEmFLogY1CFBIF1UZQw158bnkbCa1NaJnZfd8uq9i9GrTo4inU0IqI2QtmylqYub3PGw+U6NOZdie2FrpilFLI4dKjve4fvM6qAOWUU/PjfjedNmfBllcrukREIREQEREBERAREQEREBESl4FYlAZWAiIgJqttbTamO7op3ldx4EvYAfvu3uoOZ+AudJdtva6YdQti9SoctKmlu8dj0vwtxJOgAJNgDM3DYVKYORbXN2OpZja12Y6sbW1J5QI0d01XD1C758Q5FSpWKlrst7KqjUUwCyhR+8TqSb8O2pvQjq9PumtYqWqMFsCLFcts1yL3/8AL/Tk5nvp2WDEEVcI603F7rUvlIPIOASBfkQfhLscf2ft6utZMTmsQwdFC5gCpYXsxte5P+2k+jN0t6KONo02FRO9KjOgutntZrBtbXv1nLD2XY+nRLWpu1/FSBDXA5rmsCf8LcbecVNaph2y+KmyG2WpmAQ9Ax8VM+TAjzgfSe08clCk9WobKguevkB1JOgHUzh+8e26+JZ65F3IsiKbBVBOUanW1ySepPCUxG38VXopTrVGZVOYKbE3tYAsPatra559ZqcUGeyJUCG4zMSbgfAX+l9PWTHvt25MZx4zG+b3f0/T/rI2fh0NjiDVFlOZaPdo7sDfL3mtqY1sVvfTUTwdWaoMivSogk5Xqd5UOvhBbiRw1P6WV9nYUMMuIZ6osTkut+F9XbvL+gHKe1UsbKnt1Gyp0zHn6Djy5Xm3HywMXRaoynXu8xVbNbMy2Lm3MC4F5ve0IlNl7NBdBVWo7ABgagpursjW48Ml/O089l4Na1QhbmjTUU0I08NyM/lcl6noLdJDtp4e72I6Ejle1j9bz5sL7s7f2er6rjnH6fHj13NXL/O9PpvdfbtLG4dK1N1YlV7wLxSoVBZSOR1m2nId2N48Dsqi9Kg1TFVWytVIGSijAWtnbQLe+ut5rNu9oOLr3Aq9ynNaGh/mrHX4rOzynXds7w4XCC9esiHkpN3Pogux+Ugu3O1cLcYejbo9c5b+a0luzD5TlVXFm5I0JOrAnOT1LnxX8xYTK2LsDF4w/wD89B3BOrjwp8ajG1/K9/KXQzNu724rFXFWozA+6fAn/wASHX1Y+s0I7x2AUXN/CoXMSfJFFvxnVdgdkIFmxda//Lo6D0LsLn4Aes6Hsbd/C4MWw9FKeliwF3P3nN2b4mB8+YLdHF6oaQWxDWrlg4JsbiwLKeHS8yMBuHi8XinpBFQpk7x2N6aeBbctTltYWB9OMn2Pxl8Xidf/AHBH+GnTX8pOd3K2ZCOhB+Yt+UbGs3E3Kp7MV7VWq1KoTOxGVbLmsFXl7R4kyVREgREQEREBERAREQEREBEoTKQBMpKExeBWVnk9dQVUsAWuFBIBYgXNhz0npArNRtvboolaVNe9xFT+7pLx82Y+6g5sfzEx8dtw1HOHwlnqahqnGnTtoST7xB0sOYI46TL2JsVMMGNzUq1NatZ/bc/ko5KNB63Mo8thbENJmxFd+9xLizP7qLx7ukD7KX4nixFzwAG7lt5UGQViUvKwEgnah9m7tQ1JWrnVW4MiA6liOKngAdLnyk1xeIWkj1G9lFZjbjZQSfwnC9tbe756uIfMrlgRqMiUwdLm/isALZQCCdbk6Nbawy9uUy/DSbbpnRDUWlmNiWYK1hbRb8TrqD5dZ5V8LkW61VpAtYAIlrDiWdjd34nJb4zJoYla+qOSASGGW4a44HOPELHlr4p5Ua9GrXBDl3QMBoSq/vG9tel79JrTOWVyu75ZtLZ6VfGQSwdMnALwNi1xmZ78tLACWu2V318eXIljfKG0qMT1IDKPnPV8UEQsQQQ2rArZkubAADMx9kanToLa6+jXZW8YINTWxWxKkWAudctuHKcubLWL0P6Zwzk55vxO0rpMMJgy+gZgCv3m9n4Aan7rTnh2qt3TKVcXy5hmDW0B0s2p8zp8pIN5tqO1Giie0oUD75J1A8kX4EmR3+w8YcQ9NaNV6llcimDVIzqGvdL6a8b2vJx/FjPrMspbjl5ttv8Aqft/LLp0Kt8p/auzXVUTW5HuqPQcjf4SX7D7M8fibNVth061PFU+FMHT0JWbvsv3JxVLELi8SndKitkRj+0LlctyBwUKW0Ot7aTrc67fChmwezTAYazMhxDj3q1io9KY8PzBPnJkigAACwHADQASsSBERA4pjquXHYxWPDFufgVQiTrdPF2cA+8Lfp9ZD+0nCJhsf3r2VcSKbK2oBen4Kik2sPDkYfebpLsFvBTo1qK06oq52syqVJTQnTINQul76kXOlrGjr95S8peJBdEtBl0BERAREQEREBETzrV1QXZgo6kgD6wLjLTNFtDe3DUuBLn+EWHzMjeO34rvpSQIOtsx+Z0+kDoBmFV2vh1NmxFIHoai3/Gcs2jicVXH7R2I6Em3y4TDwmErUj4VJLC4BBJKjiwA90c24DmRIPTf/ejLjaiUqtKurIijKinJdDemHIIY3Oa+ts3IgW8di7342rRp4Bq1FSV1xD1SAtPN7LPm/aZVIF1YZrBcxIYyCbUxi1alSplAL87eEkADnccMp1vxvPfYfcu7NUuahJt7qqOQIW1z14frqd+Fssvb6N3Xo4VKIXDVEqrpeojI5Y2tclNPQCwAsAABNvPnvY4xODxdPE0SXCui1R7wRiB4raOjcnAFiNQpAn0HRqBlDLqGAIPkRcSd/K5zGX7btdaLS6IZW2lZWaLfHbv2OgXGtRvDTHLMfePkPqbDnAi/aJtw1H+xUmAA1qsWCi41CZidLaE+dhyIkHq7LIGj0agJIOWotuXG9rHX0+U1O0cbk1JLu5J1Op4klv4r8/WanFbTrKQCLX9CL8r/AK3luUx6dMeLPLG5SdRPsXs6ktFAhpZxa7faASxt4gKYGVNTprqq8LkzXVMKFF+8psczDKpa5INib5co46G9jykU2HtevWqLTyG7HmCRbnyB4X5yQYiuFUte/IcDcngD19Zrbm0m8mN8S0xwuSfMgXtbr/vPHG7UerUB7plCAgMFzZ2vxJVANeup01JMxNsp72a/dupY9Q+hPzIHxmnxoOb27X0sSdCAB8jx06zndZR1xyz4c9zqxNqeE77EUgGPdU170CpTBLODmKtSJF7gCyhswBvbWdz3R3b+yCpUdy9auVaox4LYGyLfUgFmNybkknyHHeyinQp1VbF11pKPGuapkpVGVlZFOawaxs+vNRbnO50Nu4R9VxNFvSqh/OJJJpnPPLPK5Zea2MTzp1lb2WB9CD+E9JWCInjicUlMXdgvqdT6DiYHtLalQKCzEADUk6ACQ/am/tIEph171hoW0CKf4mJyj0Jv5Gc23z3rxWfJVz5yAwUg0qSg3sTmysR5ju725y6/JJbdRb2x7U+14mmiVKho00zBQMpD5mUuFewPqSDYi0hdZ2NrO5NwMz6f6iTfoOswsdXLMKmcNe9yq5QSNbKfaYeZUSjYq+g1OvDMdNBcaedvnpJ7o3eLL8O+br70YlsNRBVCQgBaoWLka5S1j7VrX1OvWSGhtqp7yp8My/rOA7v7xVksgqqxHspVJS4/gqjS/wB7TzHCdX2ZjHemjVKZRioJAIYD4jQ9dOsvTNxs8ppS2sDxQj7pDfjaZdLHU294A9D4fxkWoN0N5kd91l0iVxIzRxBX2SV9Dp8uEzqO03HGzfQ/p9JNDcRMOltJDxuvrw+Y0mWrAi4Nx5ayCsRECLbb2zXLtSoCwXQkAsxPO1uA+s039gYusbvnPmxy/wBRvOggWlYEJw+5R94r87/lNjQ3RQcW+S/7ySxA09Pd2iOp8tLfhf6xtnYi1MLiKFIZGrUmXONWLFSAWY3LHlrebiWVaqqCzEKoFySQAB1JPAQPlfFbHqd53VTMtiwFlLXaxsOpt+bHiZjrsvEU81QJlCAE5vASuYKDlY5jqQLgSfb+b3YMYknDHvUYftWUWXMLkBSdKikm55DlcnSG7U3p7xO7pYdlGhJJFrh1YEDLYEZQPQt1vLJJ4bzzyz8t5u5vBe2fRgStyNR1U3/pP+86bht8+5wgVKDVKqAKgSxpkXABJLAqAOXUWvqJwKhj6veGpmXMfa0UqR0ZBfMPU35giTndnEVK4Ip0nccKiKj1Qt9NCASVPQ6jz4zXlzbyvv3tpz4aNCkPNqZ/qea/E7z7Wb28fSp+SlAf8qfnPHa3Z7iiyth6VSorcUfNTamel6pUMvQ8eR6myh2W7SbjTRPv1h/pzSdKxMVtHEt/ebUrN1CM5H/2KJhHahokNTqmoQNHqBu8Vje5XxmxsbZuPpzlOH7HcYfbrYdful3P9AmViOyGpSpVKhxYqFabkU1olcxAJAzmobcP3ZOhzA1mdhbUtZFBFrcAtvp8jJbsXccYhc74hWI8JClhlOhIs1PoeP8A+SFsAtQKeFwwNxawV7jhxuV19euk2o72VECrSRB7zu4Nmc2vZVsSf4m/3mfbPdt3vJn9KY7629dpbnjBU2royvktnV8zBlJAIsFU2ub8fwkT2rtF63E3JIB48lCqBz0A06X9LSht+DiVahXQISGUFL5HBBBWzE5W6EGxPTnFcGwVlbS4KnXhdSCfhob+U04TbUbQrsQ3mAD8CD+IEx6zljddbgXB1BNpvNuYLu2YEaliNPTXjyvf4TV4ZwFvoLX1mY3yb3u/K/DYhlSyq6+RYsn8o93z43mzobQ0UWqDrlrFQNeQ15TP2PunjsX4kw9UIBc1GRgtv4dPGfJbyVYDcOx0w+JqnpUR6CX53IXNx87esrO2gwtNapCpWrlzwUXc/C1iZtWwmJw9r46qjX0poS1W/wB3vAo/mIPkZMaW5OL7shVpUx/wQ3cqfvsiuX9bgzS43dDa6XFKjSUWt+wqLmI83qEOfnNdI98JtzE0U1r1Fv7+JrEtr0QAfIqCP3pqcftA1Dq4xJPHPVFNPhTF8385aafG7qbRS5fCVyeZVTVPzXNNRiKdej7a1Kf31ZPxAgdD2fvP9lQE0QhFgptSq2vpZQuVgPIW/ORvtGddoY81cI4q2w1IZMjeKz1M4sbE5fATy143AEjVTG1XXL3vhJB4X4fzSzZu1quFq96r5hYhgF87jQ3BsdeVtepk1tZbLuK4PY1Sq7IVsVp5dVKhAGVeWoJNwepY85fVBWoKVSn3eTwt+zVG1XK2qgFb3Y214g8bk7nB7z0O8Wp39WmWqB6l2JLgKBTp5gwJpgliVsNGsPZEsxO26DuWdlfMzPZkVqY8ZyqbBKl8oUs4YhixupteT2xv6uXy1mD3beoVVCxpjXvGQopJ4201NgOHS/AEzue5G71MYRQc4OZgDm5Cw9k3UG9/1M45iN9qatelTqMbvZXIy2YqxZmuXZ84voVGXKDe0612ObYqYnCVTVfMVrsB5KVVrDoLlrS6knTOWVy8pI2wf3XHxXX5g/lMepsquOARvVyD/R+ckERtlEcXh6+UgYeqptoy90639O8zfSaF69dPbFRfN0dB82AE6beViUc4w22W6gj5/UTY4bbI42IPVTJXidm0amr0kY9SgJ+drzXVt1cOfZDp91yfo9x8pdwXbN20GIUte+gNrG/nEx8Pu0abhhUuoINitiADfiDYn4CJLoSKIiQIlLymaBdIT2qbvVsZh07pqh7t7mmlrOCPaKn2ip4C/MyZ5pRn8oHy9R3Vx9ViqYSuSDY/smprf7zAD6zdYTsm2nUFzRp0/wDq1VJ/yZ59AVK7cl+s8GxFXoJRyLYnYziHcHFVkp0weFIl6jDmASAq8tdfSdc3f2Dh8DSFHD08iXudSWZjYFmY6k6D5AcJclSr0E90Z4GVE8QzdJdmPSQekoRLM56SneeUD5p7R9kfZMbUS3hWpmX/AKb+IfLQfCaLHVDmDXJQjTKSPjoZ1Tt4wSk0K3Asrox5WWxXX+YzjuFr1FsiaszWC2LDXoBrc9B1hZ23Wx8E+KeioHj7wG508CnMxP8AKCfUeczduYIYfEGmqnKMpGYe0CozEciC2b6jlNtsnsyx+J1xDDDodCG1YjT/ANJTf4Ow4cJjb37kf2WUZKgqUqrZQcuRgwW5uNRa3MH4aSo1O3HAAFyTqLk3Nja5ufITrvY7u9Sp4JMRUoUzVd3ZHKA1BTuABmOoGZWOltCJyDD4NsViKVNTq5RBfkS2UnzHA/GfSeBRKSJSQWRFVVHRVFh9BFg2QeXBpjpUE9laQegMrLRLoCIiBgYvYmFq/wB5hqL/AH6SN+InNO0bs2GUV9n0QCobvaSFrsNLNTXhca3UWvfThOtRA+RsZs5kYqxIYe7UTW3xs0w2wR/dH8rW+hn15jtn0a65a1JKi9KiK4+TCRbaXZls2tciiaRPOk7L/lN1HylHzZTwov7w15rf8L3kq3X2/VwFQVaJ8XBlN8jr+644nyIFxy5gz/aPYyRrh8X6LWT/AFp/2zywHY5WJvWxaIP3aSFzb7zZbfKOh1XZOMFehSrAZRUpo+U6kZlBtfyvMq08Nm4JaFKnRS+WmiouY3NlFhc9ZkyC2VEESsBERAREQEREBaLREBaUIlYgeZWWlZ7SloHkBLwZXLK2gBKxEBLTLpQiBxTt1wtc16Tlj3HdEJp4VqAsXHmxGX4Dy05IaFrFTe+t72NwdLdDcdZ9dbR2fTroadVFdDxVwGBtqNDNJX3LwLp3ZwlHIOAFNRb0IFx8JR8+UN7NpJT7tcbWCcrtmYctHYFgOOgM19bE1qpzVK1SqwIA7yo1QgnpmJ6dZ3ZuyTZxa5SpbkveuFHPQg5vmZnL2Z7Ny5RhwPMM2b/Fe/1gcP2HgqhrUCLM5rUe7UcmzrlPz/WfTK4aavYG6GFwZvRSzWtmOrW+8dbeQNpIAsbGOuHl60p7ASsg8wplbGXxAsvKZ5fKGBb3sp3wlSssKQLu+ECsJ5NRnmcPKMsVRKhphikRPVbyDIvF55iXCBfKXlIgXRKAysBERAREQEREBERAREQEREBERAREQKGWREBKiIgXCViICIiAlDEQBlIiAlDEQKRKRArKREBLoiAiIgVl0RAREQP/2Q==">
+      </div>
+      </p>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="col-50">
+      <div class="review">
+        <div class="slider-container">
+          <div class="review-container">
+            <div id="slider1" class="review-slide">
+              <p>“Fantastic service and top-notch drones. <br> Highly recommended!” - Jane Doe <br> ⭐️⭐️⭐️⭐️⭐️/5</p>
+            </div>
+            <div id="slider2" class="review-slide">
+              <p>“Excellent quality and great support. <br> I'm very satisfied!” - John Smith <br> ⭐️⭐️⭐️⭐️/5 <br></p>
+            </div>
+            <div id="slider3" class="review-slide">
+              <p>“Great support team. Helped me assemble <br> my drone with ease.” - Emily Johnson <br> ⭐️⭐️⭐️⭐️/5 <br>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="button-container">
+          <a href="#slider1" class="slider-change"></a>
+          <a href="#slider2" class="slider-change"></a>
+          <a href="#slider3" class="slider-change"></a>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-50" id="Reviews">
+      <br><br><br><br><br><br> <br>
+      <h1>Reviews</h1>
+      <p>Our customers consistently praise our products and services, highlighting the exceptional quality, ease of
+        assembly,
+        ùand outstanding performance of our drones. Many appreciate our dedication to innovation and the ability to
+        customize
+        their drones to meet specific needs. The positive feedback we receive reinforces our commitment to excellence
+        and
+        motivates us to continue delivering top-notch products and support.</p>
+    </div>
+  </div>
+
+  <script>
+    let item = document.querySelector('.icon-hamburger');
+    item.addEventListener("click", function () {
+      document.body.classList.toggle('menu-open');
+    });
+  </script>
+
+  <script>
+    window.onpopstate = function (event) {
+      // Tarayıcı geri düğmesi tıklandığında, kullanıcının oturum açıkken ana sayfaya yönlendirilmesi
+      const currentLocation = window.location.pathname;
+      const homePage = '/'; // Ana sayfanın adresi
+      const isLoggedIn = true; // Kullanıcı giriş yapmışsa true, yapmamışsa false olarak işaretleyin
+
+      if (currentLocation !== homePage && isLoggedIn) {
+        // Kullanıcı oturum açıkken ve ana sayfada değilken geri düğmesine basıldıysa,
+        // ana sayfaya yönlendirin
+        window.location.href = homePage;
+      }
+    };
+  </script>
+  <script src="/js/script.js"></script>
+</body>
+
+</html>

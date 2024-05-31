@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Components</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__content">
+      <a class="header__logo" href="">
+        <strong>FEA</strong>
+      </a>
+      <ul class="header__menu">
+        <li><a href="index
+          ">Home</a></li>
+        <li><a href="#Frame">Frame</a></li>
+        <li><a href="#Engines">Engines</a></li>
+        <li><a href="#Propellers">Propellers</a></li>
+        <li><a href="#Batteries">Batteries</a></li>
+        <li><a href="#Controllers">Controllers</a></li>
+        <li><a href="#Cameras">Cameras</a></li>
+        <% if (user) { %>
+          <li><a href="add" id="add">Add</a></li>
+          <% } %>
+            <% if (user) { %>
+              <li><a href="logout" id="logout">logout</a></li>
+              <% } %>
+
+
+      </ul>
+
+      <div class="header__quick">
+        <% if (!user) { %>
+          <a href="login" id="loginLink">Sign up/Login</a>
+          <% } %>
+            <div class="icon-hamburger">
+              <span></span>
+              <span></span>
+            </div>
+      </div>
+      </ul>
+      <div class="header__quick">
+        <a href="login" id="loginLink">Sign up/Login</a>
+        <div class="icon-hamburger">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="cover" id="cover">
+    <div class="cover__content">
+      <h1> Components </h1>
+      <a href="" class="button" id="assembleButton" disabled>Assemble</a> <!--I would like this button to appear only after the login, with "Assemble written on it"-->
+    </div>
+  </div>
+
+
+  <div class="grid">
+    <div class="col-50" id="Frame">
+      <div class="spacer"></div>
+      <h1>Frame</h1>
+    </div>
+    <div class="col-100">
+      <p> 
+        The frame is the foundational structure of the drone, to which all other parts are attached. It can be made from various 
+        materials such as plastic, carbon fiber, or aluminum. Its shape and size significantly influence the drone's stability and 
+        performance.<br>
+        <div class="col-50">
+          <p>
+          1 - iFlight ProTek25 HD/Analog CineWhoop Frame - <b>$49.99</b> <br>
+          Durable plastic protections with copper spacers, compact portable design, easily accessible USB port without disassembly. <br>
+          
+          <b>Specifications:</b> <br>
+          - Wheelbase: 114 mm <br>
+          - Dimensions: 91*68.7 mm <br>
+          - Total Weight: 93g <br>
+          - Distance between bottom and top plate: 24mm (dedicated space for electronics mounting) <br>
+          </p>
+          
+          <p>
+          2 - iFlight TITAN DC5 V1.4 HD Frame - <b>$89.99</b> <br>
+          Popular Deadcat-style configuration, optimized weight distribution with no props in view. <br>
+          
+          <b>Specifications:</b> <br>
+          - Accepts electronics with dimensions: 30.5*30.5mm and 20*20mm <br>
+          - Camera Size Support: 19*19mm, 22*22mm <br>
+          - Wheelbase: 222 mm <br>
+          - Dimensions: 185*133 mm <br>
+          - Weight: 150.4g <br>
+          </p>
+          
+          <p>
+            3 - COMANCHE III HD PRO - <b>$79.90</b> <br>
+          Its main focus is aerial shooting in tight spaces, providing exciting footage with its vibration-free rigid frame. <br>
+          
+          <b>Specifications:</b> <br>
+          - 3mm pure 3K Twille carbon fiber frame <br>
+          Allows you to explore where other smaller drones wouldn't dare, thanks to its durable frame. <br>
+          </p>
+          
+        </div>
+      </p>
+    </div>
+  </div> <br>
+
+  <div class="grid">
+    <div class="col-50"  id="Engines">
+      <div class="spacer"></div>
+      <h1>Engines</h1>
+      <p>
+        Multirotor drones, such as quadcopters, have motors (generally 4, 6, or 8) that generate the thrust needed for flight. There are two main types of motors used in drones: <br>
+        - <b>Brushless Motors:</b> Offer greater efficiency and durability. <br>
+        - <b>Brushed Motors:</b> More affordable but less efficient and durable.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="grid">
+    <div class="col-100" id="Propellers">
+      <div class="spacer"></div>
+      <h1>Propellers</h1> <br>
+      <p>Propellers are mounted on the motors and generate the thrust that lifts the drone. The size and pitch of the propellers 
+        affect the flight speed and stability.</p> <br>
+      </div>
+      <div class="col-100"> 
+        <div class="col-50">
+          <p>
+            1- Quick-release Folding Propellers (Pair) - <b>$69</b> <br>
+            Each propeller blade has undergone precise dynamic balancing tests to increase aerodynamic efficiency and produce less noise. <br>
+            
+            <b>Package Contents:</b> <br>
+            - Quick-release folding propellers for Inspire 3 (pair) x 1 <br>
+            
+            <b>Compatibility:</b> <br>
+            - DJI Inspire 3 <br>
+          </p>
+  
+        </div>
+        <div class="col-50">
+          <img src="" alt="">
+        </div>
+      
+       <div class="col-50">
+        <p>
+          2 - Basic Propellers - <b>$9</b> <br>
+         They offer efficient and stable propulsion for the aircraft. <br>
+ 
+         <b>Package Contents:</b> <br>
+           - Propellers for DJI Avata 2 (pair) × 2 <br>
+           - Screw M2×8.7mm × 8 <br>
+ 
+         <b>Technical Specifications:</b> <br>
+           - Model: 3032S <br>
+           - Diameter: 75.66 mm <br>
+           - Weight: Approximately 1.74 g <br>
+ 
+          <b>Compatibility:</b> <br>
+           - DJI Avata 2 <br>
+         </p>
+        </div>
+        <div class="col-50">
+          <img src="" alt="">
+        </div>
+        <div class="col-50">
+          <p>
+            3 - Enhanced Propellers - <b>$15</b> <br>
+            Easy to assemble, safe, durable, perfectly balanced, and with powerful thrust. <br>
+    
+            <b>Package Contents:</b> <br>
+            - DJI FPV propellers (pair) × 2 <br>
+    
+            <b>Technical Specifications:</b> <br>
+            - Diameter × Pitch: 13.46 × 7.11 cm <br>
+            - Weight (per single propeller): 5.2 g <br>
+    
+            <b>Compatibility:</b> <br> 
+            - DJI FPV Drone <br>
+          </p>
+        </div>
+        <div class="col-50">
+          <img src="" alt="">
+        </div>
+      </div>
+  </div>
+
+  <div class="grid">
+    <div class="col-50"  id="Batteries">
+      <div class="spacer"></div>
+      <h1>Batteries</h1>
+    </div>
+      <div class="col-100">
+        <p>
+          The battery provides power to the drone. The capacity of the battery (measured in mAh) determines the flight autonomy. 
+          Drones commonly use lithium polymer (LiPo) batteries for their high power-to-weight ratio.</p>
+      </div>
+      <div class="col-50">
+        <p>
+          1 - Intelligent Flight Battery - <b>$119</b> <br>
+          Provides a flight autonomy of 23 minutes. Prepare for an immersive flight with some extra batteries to create your FPV footage more freely and safely. <br>
+
+          <b>Package Contents:</b> <br>
+          - Intelligent flight battery for DJI Avata 2 × 1 <br>
+
+          <b>Technical Specifications:</b> <br>
+          - Capacity: 2150 mAh <br>
+          - Weight: Approximately 145 g <br>
+          - Standard Voltage: 14.76 V <br>
+          - Charging Voltage (max.): 17 V <br> 
+          - Battery Type: Li-ion <br>
+          - Energy: 31.7 Wh at 0.5 C <br>
+          - Charging Temperature: Between 5°C and 40°C (41°F and 104°F) <br>
+
+          <b>Compatibility:</b> <br>
+          - DJI Avata 2 <br>
+        </p>
+
+        <p>
+           2 - Mini Intelligent Flight Battery - <b>$69</b> <br>
+          Offers a maximum flight autonomy of 34 minutes, allowing you to fly and create with peace of mind. <br>
+
+          <b>Package Contents:</b> <br>
+          - Intelligent flight battery × 1 <br>
+
+          <b>Technical Specifications:</b> <br>
+          - Model: BWX140-2590-7.32 <br>
+          - Weight: Approximately 77.9 g <br>
+          - Capacity: 2590 mAh <br>
+          - Nominal Voltage: 7.32 V <br> 
+          - Charging Voltage (max.): 8.6 V <br>
+          - Battery Type: Li-ion <br>
+          - Energy: 18.96 Wh <br> 
+          - Charging Time: 70 minutes (with DJI 30W USB-C charger and battery installed on the aircraft), 58 minutes (with DJI 30W USB-C charger and battery inserted in the Two-way charging hub) <br>
+          - Charging Temperature: From 5°C to 40°C <br> 
+          - Recommended Chargers: DJI 30W USB-C charger or other USB Power Delivery chargers <br>
+
+          <b>Compatibility:</b> <br>
+          - DJI Mini 4 Pro <br>
+          - DJI Mini 3 Pro <br>
+        </p>
+         
+        <p>
+          3 - Base Ground Battery - <b>$39</b> <br>
+          The compact battery of DJI Goggles 2 powers the visor and comes with battery level indicators. When DJI Goggles 2 is used with DJI Avata, it can display the power level of the visor in real-time. When fully charged, the battery life is approximately 2 hours. <br> 
+
+          <b>Package Contents:</b> <br>
+          - Battery for DJI Goggles 2 × 1 <br> 
+
+          <b>Technical Specifications:</b> <br>
+          - Capacity: 1800 mAh <br>
+          - Voltage: 7-9 V (1.5 A) <br>
+          - Type: Li-ion <br> 
+          - Chemical System: LiNiMnCoO2 <br>
+          - Energy: 18 Wh <br>
+          - Charging Temperature: From 0°C to 45°C <br>
+          - Charging Power (max.): 12.6 W (5 V/2 A, 9 V/1.4 A) <br>
+          - Operating Time: Approximately 2 hours <br>
+
+          <b>Compatibility:</b> <br>
+          - DJI Goggles 2 <br>
+          - DJI FPV Goggles V2 <br>
+        </p>
+
+          <p>
+            4- Intelligent Flight Battery 3.0 - <b>$139</b> <br>
+            The Mavic 2 Intelligent Flight Battery has a capacity of up to 59.29 Wh and offers a flight autonomy of up to 31 minutes. Thanks to the integrated DJI intelligent battery management system, the battery status is monitored in real-time, allowing you to worry less about battery levels and more about your fantastic flight. <br>
+  
+            <b>Features:</b> <br>
+            - High-capacity LiPo cells <br>
+            - 31 minutes of flight <br>
+            - Various intelligent battery protection features <br>
+  
+            <b>Package Contents:</b> <br>
+            - Intelligent flight battery × 1 <br>
+  
+            <b>Specifications:</b> <br>
+            - Battery Type: Four-cell LiPo battery <br>
+            - Nominal Capacity: 3850 mAh, 59.29 Wh (typical value) <br>
+            - Nominal Voltage: 15.4 V <br>
+            - Limited Charging Voltage: 17.6 V <br>
+            - Charging Temperature: -10°C – 60°C <br>
+            - Discharge Temperature: 5°C – 40°C <br>
+  
+            <b>Compatibility:</b> <br>
+            Mavic 2 Series <br>
+          </p> 
+        </p>
+      </div>
+  </div>
+
+  <div class="grid">
+    <div class="col-50">
+      <div class="">
+
+        </div>
+      </div>
+    <div class="col-100"  id="Controllers">
+      <div class="spacer"></div>
+      <h1>Controllers</h1>
+      <p>Controllers serve as the brain of the drone, managing its flight characteristics and navigation. They receive input from 
+          the pilot or onboard sensors and adjust the drone's motors accordingly. Advanced controllers offer features such as GPS 
+          navigation, altitude hold, and autonomous flight modes.
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="col-100"  id="Cameras">
+      <div class="spacer"></div>
+      <h1>Cameras</h1>
+    </div>
+      <div class="col-100">
+        <p>Cameras are essential for capturing aerial footage and providing real-time video feeds for FPV (First Person View) flying. 
+          They come in various resolutions and specifications, including HD, 4K, and thermal imaging. The quality of the camera 
+          greatly influences the drone's ability to capture stunning imagery and perform tasks such as aerial surveying and 
+          cinematography.</p>
+      </p>
+      </div>
+      
+  </div>
+  
+  <div class="spacer"></div>
+
+  <script> 
+    let item = document.querySelector('.icon-hamburger');
+    item.addEventListener("click", function() {
+      document.body.classList.toggle('menu-open');
+    });
+  </script>
+  <script src="/js/script.js"></script>
+</body>
+</html>
