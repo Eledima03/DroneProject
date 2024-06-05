@@ -46,7 +46,11 @@ router.post('/', async (req, res) => {
     // Save the user to the database
     await newUser.save().then((data)=>{
       const ID=data._id;
+<<<<<<< HEAD
         //req.session.userId=ID.toString();
+=======
+        req.session.userId=ID.toString();
+>>>>>>> 1169d3f63d3eac2b1e5a71a8da7609b1ced60d80
     })
 
     res.status(201).json({ message: 'User successfully registered!' });

@@ -1,11 +1,18 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
+=======
+
+<!DOCTYPE html>
+<html lang="en">
+>>>>>>> 1169d3f63d3eac2b1e5a71a8da7609b1ced60d80
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drone Configuration</title>
     <link rel="stylesheet" href="/css/add.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="/css/components.css">
 </head>
 
@@ -54,10 +61,65 @@
     <div class="container">
         <h2>Configure Your Drone</h2>
         <!-- Wing -->
+=======
+    <link rel="stylesheet" href="/css/components.css">  
+</head>
+<body>
+    
+  <header class="header">
+    <div class="header__content">
+      <a class="header__logo" href="">
+        <strong>FEA</strong>
+      </a>
+      <ul class="header__menu">
+        <li><a href="index
+          ">Home</a></li>
+        <li><a href="#Frame">Frame</a></li>
+        <li><a href="#Engines">Engines</a></li>
+        <li><a href="#Propellers">Propellers</a></li>
+        <li><a href="#Batteries">Batteries</a></li>
+        <li><a href="#Controllers">Controllers</a></li>
+        <li><a href="#Cameras">Cameras</a></li>
+        <% if (user) { %>
+            <li><a href="add" id="add">Add</a></li>
+            <% } %>
+            
+            <% if (user) { %>
+                <li><a href="order" id="order">Your orders</a></li>
+                <% } %>
+
+                        
+              <% if (user) { %>
+                <li><a href="statistic" >Statistic</a></li>
+                <% } %>
+              <% if (user) { %>
+                <li><a href="logout" id="logout">logout</a></li>
+                <% } %>
+  
+        </ul>
+  
+        <div class="header__quick">
+          <% if (!user) { %>
+            <a href="login" id="loginLink">Sign up/Login</a>
+            <% } %>
+              <div class="icon-hamburger">
+                <span></span>
+                <span></span>
+              </div>
+        </div>
+      </ul>
+     
+    </div>
+  </header>
+    <div class="container">
+        <h2>Configure Your Drone</h2>
+        
+>>>>>>> 1169d3f63d3eac2b1e5a71a8da7609b1ced60d80
         <div class="form-group">
             <label for="wing-select">Choose a Wing</label>
             <select id="wing-select">
                 <option value="">Select a wing</option>
+<<<<<<< HEAD
                 <option value="wing1"
                     data-image="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSiPJurdi0QPHbdOxkni8G6aJqXCc8MvgnciVu66S19SojuNyDxYSaOQmTBQM6I-z7w0LMKtc3NyQsPHJCP7OkrrAlU2fGiwG3gitnr3w-a6iW9QaW_uncpEMK8-Sd80UvH1QLS2v16Dw&usqp=CAc"
                     data-price="50">$50</option>
@@ -94,10 +156,33 @@
             <div class="image-display" id="motor-image"></div>
         </div>
         <!--battery -->
+=======
+                <option value="wing1" data-image="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSiPJurdi0QPHbdOxkni8G6aJqXCc8MvgnciVu66S19SojuNyDxYSaOQmTBQM6I-z7w0LMKtc3NyQsPHJCP7OkrrAlU2fGiwG3gitnr3w-a6iW9QaW_uncpEMK8-Sd80UvH1QLS2v16Dw&usqp=CAc" data-price="50" >$50</option>
+                <option value="wing2" data-image="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTyQenWFPZ_kCujbX61jO2fzGdnXVkF9fkjmxSF999Doj9xMm1fiZDXJQBhza41t8JEbzSfSw4LZmvSpZb3eKzye2oOhzUwv4FmXIsigRVIhMC8VIYVU8ju2M8WdsR4k4cyIXH4MbTPiXs&usqp=CAc" data-price="60">$60</option>
+                <option value="wing3" data-image="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTi6jvsYEBbeLzefQywo0eICTZdIfkOqt-4zp4EUz0w8XzYyofmPEkhus_yx21_0AMljVTav33uRWIxAoVCRsPrkpne-m9-n4tqSvxcApdS4j0iyFzSAd5_qvrvUNGlR4zsgmPGxVlvij0&usqp=CAc" data-price="70">$70</option>
+                <option value="wing4" data-image="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR3v5G97VhVtsA1b_YvDipHWdvzNKdx7QwpaH_NrxfIJQIO9KjYEHelt-3SfYFjrefclH65GnKB4xa9mY8uC_sOimjl3n63I5g4tW81jN4jTcigHUQucVsc2oeDYcES2GaLNVGUag&usqp=CAc" data-price="80">$80</option>
+            </select>
+            <div class="image-display" id="wing-image"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="motor-select">Choose a Motor</label>
+            <select id="motor-select">
+                <option value="">Select a motor</option>
+                <option value="motor1" data-image="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRGP4kTTikUxEP7TqHkKkJFkja3HLRk2Bh5p7v8DfVaWsrRiDAWMP0-Wa_KkyLqDuis5Dz5ls5H5tI87JAwrynjQKv4VT6dtQbFBSbt6po167mPC8FvCEgNMa2C7ZH_eypaCR7izZ2l3vWD&usqp=CAc" data-price="55">$55</option>
+                <option value="motor2" data-image="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSJ4IrrMROu4R8m-UbD7bYh0YzRZ4F_KmsAqCyqTGE13mvx9DpmFdErbvRYaZhcoyUSdarM1qiHr1o2EishgKmO4G9tE7W5BR8iNHuWcqRWT7564vpLl_Oucdy3G4Qrhup6yERp71SIPt8&usqp=CAc" data-price="65">$65</option>
+                <option value="motor3" data-image="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR6YUo5cMFyKaVlszGLg-NpV5gsQpYkwqurtJKQkLsHkXgC21UvplmRPazrrTuUn0y_ntpu0isS15fJyJWSACLyL8iyroYA4sZGvwWlO_EoRMpUDp0VE49t7iNj_HFsmv_t_hUSz0M&usqp=CAc" data-price="75">$75</option>
+                <option value="motor4" data-image="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTln2bzVM-R1IaEKZvpSEYCrxRxoxYAq2Yo4CskM3BMnvdEBlOCLORVcfojG2-eW8bBvRGJBdBzRrDKyoCUKWF1H49IcfcLYFMXFH_yQtyHxik_3G2D_CAQ0dPNx8UumFOUNWsLqIKd2bE&usqp=CAc" data-price="85">$85</option>
+            </select>
+            <div class="image-display" id="motor-image"></div>
+        </div>
+
+>>>>>>> 1169d3f63d3eac2b1e5a71a8da7609b1ced60d80
         <div class="form-group">
             <label for="battery-select">Choose a Battery</label>
             <select id="battery-select">
                 <option value="">Select a battery</option>
+<<<<<<< HEAD
                 <option value="battery1"
                     data-image="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS0XMVmZBapuAVaUGoSgXmDWSAE96WDpwSYEGK4nFgu8iLtvdPCnXCYlAJmNSslAD0R3Nwudol5ksWuwjJtC-E9YCM_Y70MYKpeahdifYnKE6Yhah4buUWNHTjhnv7IraAhFHxwOddOPRw&usqp=CAc"
                     data-price="50">$50</option>
@@ -200,6 +285,28 @@
             const controllerImage = document.getElementById('controller-image');
             const frameImage = document.getElementById('frame-image');
 
+=======
+                <option value="battery1" data-image="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS0XMVmZBapuAVaUGoSgXmDWSAE96WDpwSYEGK4nFgu8iLtvdPCnXCYlAJmNSslAD0R3Nwudol5ksWuwjJtC-E9YCM_Y70MYKpeahdifYnKE6Yhah4buUWNHTjhnv7IraAhFHxwOddOPRw&usqp=CAc" data-price="50">$50</option>
+                <option value="battery2" data-image="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ8YBCmtgjE7KHBm3rZitQa20QAePoOL2a_piW3JDEcsj4laz-brAOIrhpj0NhLUA0Lq8NkqIVZMQ6pw56DC0RExHELuVG_NBnJRqv4k3rjvrp8mhr9p7px8pxc5AsFqSBlixU1cOU&usqp=CAc" data-price="60">$60</option>
+                <option value="battery3" data-image="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSfZ7lIA0UCGFAfULVXuZbTsWlZrwDM0vY1vKiC7v39brBjs1-Z2-oGllRRXBqhklWTYB-hZSeep0_i5_EHWRLJllhTaSI2v_SpyuqZ5cQZbK7PwLEPxB9R8d66H-VjcZrAFITOy7A8IQ&usqp=CAc" data-price="70">$70</option>
+                <option value="battery4" data-image="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTy1gy9RPakeV7g_QPH7pAUSIYo9lFsx2cY8W1vl7N8UTOFHKCGR4fkEgao2n1c0KgyPVR5oDCGUzoCqNcNvqZkUCU6eZEtsfdNCO1oqP6hMDkvIwvfrDj6JeEG8zqMLxenilaM8QPbS0E&usqp=CAc" data-price="80">$80</option>
+            </select>
+            <div class="image-display" id="battery-image"></div>
+        </div>
+
+        <button id="submit-button">Submit</button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const wingSelect = document.getElementById('wing-select');
+            const motorSelect = document.getElementById('motor-select');
+            const batterySelect = document.getElementById('battery-select');
+        
+            const wingImage = document.getElementById('wing-image');
+            const motorImage = document.getElementById('motor-image');
+            const batteryImage = document.getElementById('battery-image');
+        
+>>>>>>> 1169d3f63d3eac2b1e5a71a8da7609b1ced60d80
             function updateImage(selectElement, imageElement) {
                 const selectedOption = selectElement.options[selectElement.selectedIndex];
                 const imageUrl = selectedOption.getAttribute('data-image');
@@ -210,6 +317,7 @@
                     imageElement.innerHTML = '';
                 }
             }
+<<<<<<< HEAD
 
             wingSelect.addEventListener('change', function () {
                 updateImage(wingSelect, wingImage);
@@ -263,6 +371,42 @@
                         description: [wingImageUrl, engineImageUrl, batteryImageUrl, controllerImageUrl, cameraImageUrl, frameImageUrl]
                     };
 
+=======
+        
+            wingSelect.addEventListener('change', function () {
+                updateImage(wingSelect, wingImage);
+            });
+        
+            motorSelect.addEventListener('change', function () {
+                updateImage(motorSelect, motorImage);
+            });
+        
+            batterySelect.addEventListener('change', function () {
+                updateImage(batterySelect, batteryImage);
+            });
+        
+            const submitButton = document.getElementById('submit-button');
+            submitButton.addEventListener('click', async function () {
+                const selectedWingValue = wingSelect.options[wingSelect.selectedIndex].value;
+                const selectedMotorValue = motorSelect.options[motorSelect.selectedIndex].value;
+                const selectedBatteryValue = batterySelect.options[batterySelect.selectedIndex].value;
+        
+                const wingPrice = wingSelect.options[wingSelect.selectedIndex].getAttribute('data-price');
+                const motorPrice = motorSelect.options[motorSelect.selectedIndex].getAttribute('data-price');
+                const batteryPrice = batterySelect.options[batterySelect.selectedIndex].getAttribute('data-price');
+        
+                const wingImageUrl = wingSelect.options[wingSelect.selectedIndex].getAttribute('data-image');
+                const motorImageUrl = motorSelect.options[motorSelect.selectedIndex].getAttribute('data-image');
+                const batteryImageUrl = batterySelect.options[batterySelect.selectedIndex].getAttribute('data-image');
+        
+                if (selectedWingValue && selectedMotorValue && selectedBatteryValue) {
+                    const data = {
+                        title: [selectedWingValue, selectedMotorValue, selectedBatteryValue],
+                        price: [wingPrice, motorPrice, batteryPrice],
+                        description: [wingImageUrl, motorImageUrl, batteryImageUrl]
+                    };
+        
+>>>>>>> 1169d3f63d3eac2b1e5a71a8da7609b1ced60d80
                     try {
                         const response = await fetch('/add', {
                             method: 'POST',
@@ -271,7 +415,11 @@
                             },
                             body: JSON.stringify(data)
                         });
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 1169d3f63d3eac2b1e5a71a8da7609b1ced60d80
                         const result = await response.json();
                         if (response.ok) {
                             alert('Content added successfully!');
@@ -286,8 +434,15 @@
                 }
             });
         });
+<<<<<<< HEAD
     </script>
 
 </body>
 
 </html>
+=======
+        </script>
+        
+</body>
+</html>
+>>>>>>> 1169d3f63d3eac2b1e5a71a8da7609b1ced60d80

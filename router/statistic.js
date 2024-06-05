@@ -19,6 +19,7 @@ router.get("/", async (req, res) => {
         let wing4 = 0;
         let engine4 = 0;
         let battery4 = 0;
+<<<<<<< HEAD
         let frame1 = 0;
         let frame2 = 0;
         let frame3 = 0;
@@ -63,10 +64,31 @@ router.get("/", async (req, res) => {
                 //! Battery
                 if (title.includes("battery1")) {
                     battery1++;
+=======
+
+        data.forEach(component => {
+            component.title.forEach(title => {
+
+
+                //!1
+                if (title.includes("wing1")) {
+                    wing1++;
+                }
+                if (title.includes("battery1")) {
+                    battery1++;
+                }
+                if (title.includes("motor1")) {
+                    engine1++;
+                }
+                //! 2
+                if (title.includes("wing2")) {
+                    wing2++;
+>>>>>>> 1169d3f63d3eac2b1e5a71a8da7609b1ced60d80
                 }
                 if (title.includes("battery2")) {
                     battery2++;
                 }
+<<<<<<< HEAD
                 if (title.includes("battery3")) {
                     battery3++;
                 }
@@ -111,10 +133,36 @@ router.get("/", async (req, res) => {
                 }
                 if (title.includes("controller4")) {
                     controller4++;
+=======
+                if (title.includes("motor2")) {
+                    engine2++;
+                }
+                //!3
+                if (title.includes("wing3")) {
+                    wing3++;
+                }
+                if (title.includes("battery3")) {
+                    battery3++;
+                }
+                if (title.includes("motor3")) {
+                    engine3++;
+                }
+
+                //! 4
+                if (title.includes("wing4")) {
+                    wing4++;
+                }
+                if (title.includes("battery4")) {
+                    battery4++;
+                }
+                if (title.includes("motor4")) {
+                    engine4++;
+>>>>>>> 1169d3f63d3eac2b1e5a71a8da7609b1ced60d80
                 }
             });
         });
 
+<<<<<<< HEAD
         res.render(join(__dirname, "../pages/statistic"), {
             wing1, engine1, battery1, 
             wing2, engine2, battery2, 
@@ -124,6 +172,14 @@ router.get("/", async (req, res) => {
             camera1, camera2, camera3, camera4,
             controller1, controller2, controller3, controller4
         });
+=======
+      
+
+        res.render(join(__dirname, "../pages/statistic"), { wing1, engine1, battery1, 
+            wing2, engine2, battery2, 
+            wing3, engine3, battery3, 
+            wing4, engine4, battery4, });
+>>>>>>> 1169d3f63d3eac2b1e5a71a8da7609b1ced60d80
     } catch (err) {
         console.error(err);
         res.status(500).send('Server Error');

@@ -1,6 +1,7 @@
-<!-- Ahmet Akaslan 53438, Eleonora Di Martino 53428, Francesco Mastrosimone 53422 -->
+
 <!DOCTYPE html>
 <html lang="en">
+<!-- Ahmet Akaslan 53438, Eleonora Di Martino 53428, Francesco Mastrosimone 53422 -->
 
 <head>
   <meta charset="UTF-8">
@@ -21,6 +22,7 @@
       <ul class="header__menu">
         <li><a href="index">Home</a></li>
         <li><a href="#Aboutus">About Us</a></li>
+<<<<<<< HEAD
         <li><a href="#Examples">Examples</a></li>
         <li><a href="#Reviews">Reviews</a></li>
           <li><a href="components">Components</a></li>
@@ -29,6 +31,21 @@
           <!--  <% if (user) { %>
               <li><a href="add" id="add">Add</a></li>
               <% } %>-->
+=======
+        <li><a href="#Assembled">Assembling Drones</a></li>
+        <li><a href="#Orders">Orders</a></li>
+        <li><a href="#Reviews">Reviews</a></li>
+
+        <% if(!user) {%>
+          <li><a href="components">Components</a></li>
+          <% } %>
+
+
+
+            <% if (user) { %>
+              <li><a href="add" id="add">Add</a></li>
+              <% } %>
+>>>>>>> 1169d3f63d3eac2b1e5a71a8da7609b1ced60d80
                 <% if (user) { %>
                   <li><a href="order" id="order">Your Orders</a></li>
                   <% } %>
@@ -37,8 +54,17 @@
                       <li> <a href="statistic">Statistic</a></li>
                       <% }%>
                         <% if (user) { %>
+<<<<<<< HEAD
                           <li><a href="logout" id="logout">Logout</a></li>
                           <% } %>
+=======
+                          <li><a href="logout" id="logout">logout</a></li>
+                          <% } %>
+
+
+
+
+>>>>>>> 1169d3f63d3eac2b1e5a71a8da7609b1ced60d80
       </ul>
 
       <div class="header__quick">
@@ -58,6 +84,7 @@
     <div class="cover__content">
       <h1> FEA </h1>
       <h2> Drones assembly </h2>
+<<<<<<< HEAD
       <% if (user) { %>
       <a href="/add" class="button" id="assembleButton" <% if (!user) { %>style="display: none;"<% } %>
           disabled>Assemble</a>
@@ -65,11 +92,35 @@
       <!--I would like this button to appear only after the login, with "Assemble written on it"-->
     </div>
   
+=======
+      <a href="" class="button" id="assembleButton" <% if (!user) { %>style="display: none;"<% } %>
+          disabled>Assemble</a>
+      <!--I would like this button to appear only after the login, with "Assemble written on it"-->
+    </div>
+>>>>>>> 1169d3f63d3eac2b1e5a71a8da7609b1ced60d80
   </div>
 
   <div class="spacer"></div>
 
   <div class="grid">
+<<<<<<< HEAD
+=======
+    <div class="col-50">
+      <h1>FEA drones</h1>
+    </div>
+    <div class="col-100">
+      <p>
+        Founded by passionate engineers and tech enthusiasts, FEA has grown into a leading company in the drone
+        industry. Our team of experts is dedicated to pushing the boundaries of drone technology. <br> <br>
+        We specialize in providing both fully assembled drones and a wide range of high-quality components for DIY
+        enthusiasts. Whether you're a hobbyist or a professional, we have the products and expertise to help you achieve
+        your goals. <br>
+      </p>
+    </div>
+  </div> <br>
+
+  <div class="grid">
+>>>>>>> 1169d3f63d3eac2b1e5a71a8da7609b1ced60d80
     <div class="col-50" id="Aboutus">
       <div class="spacer"></div>
       <h1>About Us</h1>
@@ -77,6 +128,7 @@
         customizable drones.
       </p>
       <p>Our values are rooted in innovation, incorporating the latest technologies into our products, and ensuring
+<<<<<<< HEAD
         quality by delivering high-performance, durable products. We prioritize customer satisfaction by offering comprehensive
         support and resources and we are also committed to sustainability through environmentally friendly practices. Choosing us means
         you can customize and design a drone that suits your needs with our easy-to-follow guides and join a vibrant community of drone enthusiasts.
@@ -88,6 +140,19 @@
     </div>
     <div class="col-50">
       <div class="spacer"></div>
+=======
+        quality by
+        delivering high-performance, durable products. We prioritize customer satisfaction by offering comprehensive
+        support
+        and resources and are committed to sustainability through environmentally friendly practices. Choosing us means
+        you can
+        customize and design a drone that suits your needs, receive expert support for assembly and operation, and join
+        a
+        vibrant community of drone enthusiasts.
+      </p>
+    </div>
+    <div class="col-50">
+>>>>>>> 1169d3f63d3eac2b1e5a71a8da7609b1ced60d80
       <div class="cover">
         <img src="/images/drone6.png" alt="">
       </div>
@@ -95,6 +160,7 @@
   </div>
 
   <div class="grid">
+<<<<<<< HEAD
     <div class="col-50" id="Examples">
       <div class="spacer"></div>
       <h1>Examples</h1>
@@ -109,6 +175,47 @@
         enthusiasts alike. Perfect for those looking to venture into the world of drones with a device that combines 
         user-friendliness with excellent performance.
        <br> <br>
+=======
+    <div class="col-50">
+      <div class="cover">
+        <img src="/images/drone7.jpg" alt="">
+      </div>
+    </div>
+    <div class="col-50" id="Assembled">
+      <div class="spacer"></div>
+      <h1>Assembling Drones</h1>
+      <p>At FEA, our values are deeply rooted in innovation, quality, customer satisfaction, and sustainability. We
+        integrate
+        the latest technologies into our products, ensuring they are high-performance and durable. Our commitment to
+        customer
+        satisfaction is reflected in the comprehensive support and resources we provide. Additionally, we are dedicated
+        to
+        environmentally friendly practices. </p>
+      <p>Choosing us means you can enjoy the experience of assembling your own drone with our easy-to-follow guides and
+        expert
+        support. Our extensive range of components allows you to design and customize a drone that perfectly fits your
+        needs.
+        By joining FEA, you become part of a vibrant community of drone enthusiasts, sharing knowledge and passion for
+        cutting-edge drone technology. </p>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="col-50" id="Orders">
+      <div class="spacer"></div>
+      <h1>Orders</h1>
+    </div>
+    <div class="col-100">
+      <p>Here are a few examples of assembled drones:</p>
+    </div>
+
+    <div class="col-50">
+      <p> <b> Sofia's Marine Exploration Drone</b>
+        Sofia has designed a drone ideal for exploring the most remote underwater depths. Equipped with a
+        high-definition underwater
+        camera and quick-release folding propellers, this drone offers reliable performance and easy maneuverability.
+        <br> <br>
+>>>>>>> 1169d3f63d3eac2b1e5a71a8da7609b1ced60d80
         Components: <br>
         - COMANCHE III HD PRO Frame - $79.90 <br>
         - Intelligent Flight Battery 3.0 - $139 <br>

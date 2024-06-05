@@ -34,7 +34,11 @@ app.use('/', (req, res, next) => {
 
 const login = require('./router/loginPage.js');
 const home = require('./router/homePage.js');
+<<<<<<< HEAD
 const components= require('./router/componentsPage.js');
+=======
+const components = require('./router/componentsPage.js');
+>>>>>>> 1169d3f63d3eac2b1e5a71a8da7609b1ced60d80
 const signup = require('./router/registerPage.js');
 const add=require("./router/add.js")
 const order=require("./router/order.js")
@@ -47,7 +51,10 @@ app.use("/login",login);
 app.use("/add",add);
 app.use("/order",order);
 app.use("/statistic",statistic);
+<<<<<<< HEAD
 app.use("/components",components);
+=======
+>>>>>>> 1169d3f63d3eac2b1e5a71a8da7609b1ced60d80
 app.use("/logout",(req,res)=>{
     req.session.destroy((err) => {
         if(err) {
