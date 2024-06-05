@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siparişleriniz</title>
+    <link rel="stylesheet" href="/css/order.css">
+    <link rel="stylesheet" href="/css/components.css">  
+</head>
+<body>
+    <header class="header">
+        <div class="header__content">
+            <a class="header__logo" href=""><strong>FEA</strong></a>
+            <ul class="header__menu">
+                <li><a href="index">Home</a></li>
+                <li><a href="components">Components</a></li>
+                <% if (user) { %>
+                    <li><a href="add" id="add">Add</a></li>
+                    <li><a href="order" id="order">Your orders</a></li>
+                    <li><a href="logout" id="logout">Logout</a></li>
+                <% } %>
+            </ul>
+            <div class="header__quick">
+                <% if (!user) { %>
+                    <a href="login" id="loginLink">Sign up/Login</a>
+                <% } %>
+                <div class="icon-hamburger">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <h1>Your Orders</h1>
+
+    <div id="orders-container" class="orders-container">
+        <% if (components.length === 0) { %>
+            <p>You Don't Have Orders Yet.</p>
+        <% } else { %>
+            <div class="container-group">
+                <% for (let i = 0; i < components.length; i++) { %>
+                    <div class="component-container">
+                        <div class="list">
+                            <% for (let j = 0; j < components[i].title.length; j++) { %>
+                                <div class="item">
+                                    <h2><%= components[i].title[j] %></h2>
+                                    <img src="<%= components[i].description[j] %>" alt="Bileşen Görseli">
+                                    <p><%= components[i].price[j] ? components[i].price[j] + '$' : 'Fiyat mevcut değil' %></p>
+                                </div>
+                            <% } %>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>

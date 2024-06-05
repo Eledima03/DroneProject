@@ -1,0 +1,159 @@
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignIn & SignUp</title>
+    <link rel="stylesheet" type="text/css" href="/css/stylelogin.css" />
+    <link rel="stylesheet" type="text/css" href="/css/components.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <a class="header__logo" href="#">
+          <strong>FEA</strong>
+        </a>
+        <ul class="header__menu">
+          <li><a href="index">Home</a></li>
+          <li><a href="components">Components</a></li>
+        </ul>
+        <div class="header__quick">
+          <a href="login" id="loginLink">Sign up/Login</a>
+          <div class="icon-hamburger">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="forms-section">
+      <h1 class="section-title">Login & Signup Forms</h1>
+      <div class="forms">
+        <div class="form-wrapper is-active">
+          <button type="button" class="switcher switcher-login">
+            Login
+            <span class="underline"></span>
+          </button>
+          <form class="form form-login" id="loginform">
+            <fieldset>
+              <legend>Please, enter your email and password for login.</legend>
+              <div class="input-block">
+                <label for="login-email">E-mail</label>
+                <input id="login-email" type="email" required />
+              </div>
+              <div class="input-block">
+                <label for="login-password">Password</label>
+                <input id="login-password" type="password" required />
+              </div>
+            </fieldset>
+            <button type="submit" class="btn-login">Login</button>
+          </form>
+        </div>
+
+        <div class="form-wrapper">
+          <button type="button" class="switcher switcher-signup">
+            Sign Up
+            <span class="underline"></span>
+          </button>
+
+          <form class="form form-signup" id="signupform">
+            <fieldset>
+              <legend>Please, enter your email, password and password confirmation for sign up.</legend>
+              <div class="input-block">
+                <label for="signup-username">Username</label>
+                <input id="signup-username" type="text" required />
+              </div>
+              <div class="input-block">
+                <label for="signup-email">E-mail</label>
+                <input id="signup-email" type="email" required />
+              </div>
+              <div class="input-block">
+                <label for="signup-password">Password</label>
+                <input id="signup-password" type="password" required />
+              </div>
+              <div class="input-block">
+                <label for="signup-confirm-password">Password confirmation</label>
+                <input id="signup-confirm-password" type="password" required />
+              </div>
+            </fieldset>
+            <button type="submit" class="btn-signup">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="/js/index.js"></script>
+    <!-- Sign Up Form -->
+    <script>
+      // Sign up
+      document.getElementById('signupform').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const username = document.getElementById('signup-username').value;
+        const email = document.getElementById('signup-email').value;
+        const password = document.getElementById('signup-password').value;
+
+        const response = await fetch('/signup', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ username, email, password })
+        });
+
+        const res = await response.json();
+        if (response.ok) {
+          alert('User registered successfully!');
+        } else {
+          alert(`Error registering user: ${res.message}`);
+        }
+      });
+
+      // Login
+      document.getElementById("loginform").addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = document.getElementById('login-email').value;
+        const password = document.getElementById('login-password').value;
+
+        const response = await fetch('/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ email, password })
+        }).then(response => response.json()).then(ress => {
+          console.log(ress);
+          
+          if (ress.case) {
+      alert('Login successful!');
+
+      setTimeout(() => {
+          // Yönlendirme işlemi
+          window.location.href = '/';
+      }, 1000);
+    
+  } else {
+      alert(`Error logging in: ${ress.message}`);
+  }
+        });
+
+
+
+      });
+
+      const switchers = [...document.querySelectorAll('.switcher')];
+      switchers.forEach(item => {
+        item.addEventListener('click', function () {
+          switchers.forEach(item => item.parentElement.classList.remove('is-active'));
+          this.parentElement.classList.add('is-active');
+        });
+      });
+    </script>
+  </body>
+
+  </html>

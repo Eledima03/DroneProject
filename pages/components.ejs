@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Components</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__content">
+      <a class="header__logo" href="">
+        <strong>FEA</strong>
+      </a>
+      <ul class="header__menu">
+        <li><a href="index
+          ">Home</a></li>
+        <li><a href="#Frame">Frame</a></li>
+        <li><a href="#Engines">Engines</a></li>
+        <li><a href="#Propellers">Propellers</a></li>
+        <li><a href="#Batteries">Batteries</a></li>
+        <li><a href="#Controllers">Controllers</a></li>
+        <li><a href="#Cameras">Cameras</a></li>
+      <!--  <% if (user) { %>
+          <li><a href="add" id="add">Add</a></li>
+          <% } %>-->
+            <% if (user) { %>
+              <li><a href="logout" id="logout">Logout</a></li>
+              <% } %>
+
+
+      </ul>
+
+      <div class="header__quick">
+        <% if (!user) { %>
+          <a href="login" id="loginLink">Sign up/Login</a>
+          <% } %>
+            <div class="icon-hamburger">
+              <span></span>
+              <span></span>
+            </div>
+      </div>
+      </ul>
+     <!--
+      <div class="header__quick">
+        <a href="login" id="loginLink">Sign up/Login</a>
+        <div class="icon-hamburger">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+     --> 
+    </div>
+  </header>
+
+
+ <div class="cover" id="cover">
+  <div class="cover__content">
+    <h1> Components </h1>
+    <% if (user) { %>
+    <a href="/add" class="button" id="assembleButton" disabled>Assemble</a> <!--I would like this button to appear only after the login, with "Assemble written on it"-->
+    <% }%>
+  </div>
+</div>
+
+
+<div class="grid">
+  <div class="col-50" id="Frame">
+    <div class="spacer"></div>
+    <h1>Frame</h1>
+  </div>
+    <p> 
+      The frame is the foundational structure of the drone, to which all other parts are attached. It can be made from various 
+      materials such as plastic, carbon fiber, or aluminum. Its shape and size significantly influence the drone's stability and 
+      performance.<br>
+      <div class="col-50">
+        <p>
+          1 - iFlight ProTek25 HD/Analog CineWhoop Frame - <b>$49.99</b> <br>
+          Durable plastic protections with copper spacers, compact portable design, easily accessible USB port without disassembly. <br>
+          <b>Specifications:</b> <br>
+          - Wheelbase: 114 mm <br>
+          - Dimensions: 91*68.7 mm <br>
+          - Total Weight: 93g <br>
+          - Distance between bottom and top plate: 24mm (dedicated space for electronics mounting)
+          </p>
+      </div>
+
+      <div class="col-50">
+          <img class="imgcomp" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSqcu_osfG__3iRqUSH99cDx2du0PcizBGpLjZE8FJz-N9aWNEB" alt="">
+      </div>
+        
+        <div class="col-50">
+          <p>
+            2 - iFlight TITAN DC5 V1.4 HD Frame - <b>$89.99</b> <br>
+            Popular Deadcat-style configuration, optimized weight distribution with no props in view. <br>
+            
+            <b>Specifications:</b> <br>
+            - Accepts electronics with dimensions: 30.5*30.5mm and 20*20mm <br>
+            - Camera Size Support: 19*19mm, 22*22mm <br>
+            - Wheelbase: 222 mm <br>
+            - Dimensions: 185*133 mm <br>
+            - Weight: 150.4g <br>
+            </p>
+        </div>
+        <div class="col-50">
+          <img class="imgcomp" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQMMQSDvpcw7mMLEjehzf0gYk2p00NqRfg1HuoehIiGuosO-tKj" alt="">
+        </div>
+        
+        <div class="col-50">
+          <p>
+          3 - COMANCHE III HD PRO - <b>$79.90</b> <br>
+        Its main focus is aerial shooting in tight spaces, providing exciting footage with its vibration-free rigid frame. <br>
+        
+        <b>Specifications:</b> <br>
+        - 3mm pure 3K Twille carbon fiber frame <br>
+        Allows you to explore where other smaller drones wouldn't dare, thanks to its durable frame. <br>
+        </p>
+        </div>
+
+        <div class="col-50">
+          <img class="imgcomp" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQpZ7Xg6liCPJgu2ZtDgmBfGlhxljIKzYrFR5EWLxkvUw2o3VQo" alt="">
+        </div>
+    </p>
+</div> <br>
+
+<div class="grid">
+  <div class="col-50"  id="Engines">
+    <div class="spacer"></div>
+    <h1>Engines</h1>
+  </div>
+    <p>
+      Drone motors are crucial components that determine the drone's flight capabilities, maneuverability, and energy 
+      efficiency. Choosing the right motor is essential to optimize the drone's performance.
+    </p>
+
+    <div class="col-50">
+      <p>
+        1 - E310 TUNED PROPULSION SYSTEM - <b>$209.99</b> <br>
+        The E310 package features newly upgraded motors, propellers, and ESCs (Electronic Speed Controllers). With the transition from a traditional <br>
+        square-wave drive system to a revolutionary sine-wave drive system, the innovations packed into the E310 Motor Package make it our most efficient, <br>
+        maneuverable, and stable multi-rotor platform to date. <br> <br>
+        
+        <b>Package Contents:</b> <br>
+        Upgraded motors × 4 <br>
+        Propellers × 4 <br>
+        ESCs (Electronic Speed Controllers) × 4 <br> <br>
+        
+        <b>Note:</b> This package offers improved efficiency, maneuverability, and stability, making it ideal for various multi-rotor applications. <br> <br>
+      </p>
+    </div>
+    <div class="col-50">
+      <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQgUmQK-ULg2p2_1E_C5jHxqlMta3xPgXVaXwGESWiuafSQQa_R" alt="">
+    </div>
+
+    <div class="col-50">
+      <p>
+      2 - 3508 Motor - <b>$58.99</b> <br>
+      Improved mass production techniques and scientific quality control systems ensure lower costs and increased accessibility for users.  <br>
+      The new self-tightening mechanism dramatically reduces the chance of loosening rotors or incorrectly installed rotors. Tool-free mounting and dismounting <br>
+      simplify storage and transportation. <br>
+      
+      <b>Package Contents: </b><br>
+      3508 motor × 1 <br> <br>
+      
+      <b>Note: </b>This motor features a self-tightening mechanism and tool-free mounting for easy use and convenience. <br> <br>
+    </p>
+    </div>
+    <div class="col-50">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKtd-w5GleYEyimQRp2xOYSTPCDEDlaUdrdgJFfmrTlBkvZUNZ" alt="">
+    </div>
+
+    <div class="col-50">
+      <p>
+      3 - E305 TUNED PROPULSION SYSTEM - <b>$250</b> <br>
+      Built with improved manufacturing techniques, the brand new 2312E motor represents a significant upgrade over <br>
+      the previous 2312 model. The optimized electromagnetic system boosts efficiency by nearly 7% and reduces cogging torque, providing smoother performance <br>
+      at low RPMs. A newly designed motor base enhances heat dissipation and offers a more advanced, hi-tech look. <br> <br>
+      
+      <b>Package Contents:</b>
+      Upgraded motors × 4 <br>
+      Propellers × 4 <br>
+      ESCs (Electronic Speed Controllers) × 4 <br> <br>
+      
+      <b>Note:</b> This tuned propulsion system offers improved efficiency, smoother performance, and a sleek design for enhanced aerial capabilities. <br> <br>
+    </p>
+    </div>
+    <div class="col-50">
+      <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTFcBdMpDaOE2cekIA_V5bi1LoJ26QxZ7ToD79R3x9o9wg8M3KU" alt="">
+    </div>
+    
+</div>
+
+<div class="grid">
+  <div class="col-100" id="Propellers">
+    <div class="spacer"></div>
+    <h1>Propellers</h1> <br>
+    <p>Propellers are mounted on the motors and generate the thrust that lifts the drone. The size and pitch of the propellers 
+      affect the flight speed and stability.</p> <br>
+    </div>
+
+      <div class="col-50">
+        <p>
+          1- Quick-release Folding Propellers (Pair) - <b>$69</b> <br>
+          Each propeller blade has undergone precise dynamic balancing tests to increase aerodynamic efficiency and produce less noise. <br>
+          
+          <b>Package Contents:</b> <br>
+          - Quick-release folding propellers for Inspire 3 (pair) x 1 <br>
+          
+          <b>Compatibility:</b> <br>
+          - DJI Inspire 3 <br>
+        </p>
+      </div>
+
+      <div class="col-50">
+        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQBuNp8IVAS6m56oj_nVm3RbKFoYFMGIbN_grTePSNMX43rmUY6" alt="">
+      </div>
+    
+     <div class="col-50">
+      <p>
+        2 - Basic Propellers - <b>$9</b> <br>
+       They offer efficient and stable propulsion for the aircraft. <br>
+
+       <b>Package Contents:</b> <br>
+         - Propellers for DJI Avata 2 (pair) × 2 <br>
+         - Screw M2×8.7mm × 8 <br>
+
+       <b>Technical Specifications:</b> <br>
+         - Model: 3032S <br>
+         - Diameter: 75.66 mm <br>
+         - Weight: Approximately 1.74 g <br>
+
+        <b>Compatibility:</b> <br>
+         - DJI Avata 2 <br>
+       </p>
+      </div>
+
+      <div class="col-50">
+        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQX2GstCAxXqIt0TwSBoJEEMnqtADdULzyZMMKgwH7aIOdkCex-" alt="">
+      </div>
+
+      <div class="col-50">
+        <p>
+          3 - Enhanced Propellers - <b>$15</b> <br>
+          Easy to assemble, safe, durable, perfectly balanced, and with powerful thrust. <br>
+  
+          <b>Package Contents:</b> <br>
+          - DJI FPV propellers (pair) × 2 <br>
+  
+          <b>Technical Specifications:</b> <br>
+          - Diameter × Pitch: 13.46 × 7.11 cm <br>
+          - Weight (per single propeller): 5.2 g <br>
+  
+          <b>Compatibility:</b> <br> 
+          - DJI FPV Drone <br>
+        </p>
+      </div>
+      <div class="col-50">
+        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSE3ZFQ9qvzjF6jS3hyxYsoFx4oMJ_sc3LBKbiq3SMIfMLEAp_O" alt="">
+      </div>
+
+</div>
+
+<div class="grid">
+  <div class="col-50"  id="Batteries">
+    <div class="spacer"></div>
+    <h1>Batteries</h1>
+  </div>
+
+    <div class="col-100">
+      <p>
+        The battery provides power to the drone. The capacity of the battery (measured in mAh) determines the flight autonomy. 
+        Drones commonly use lithium polymer (LiPo) batteries for their high power-to-weight ratio.</p>
+    </div>
+
+    <div class="col-50">
+      <p>
+        1 - Intelligent Flight Battery - <b>$119</b> <br>
+        Provides a flight autonomy of 23 minutes. Prepare for an immersive flight with some extra batteries to create your FPV footage more freely and safely. <br>
+
+        <b>Package Contents:</b> <br>
+        - Intelligent flight battery for DJI Avata 2 × 1 <br>
+
+        <b>Technical Specifications:</b> <br>
+        - Capacity: 2150 mAh <br>
+        - Weight: Approximately 145 g <br>
+        - Standard Voltage: 14.76 V <br>
+        - Charging Voltage (max.): 17 V <br> 
+        - Battery Type: Li-ion <br>
+        - Energy: 31.7 Wh at 0.5 C <br>
+        - Charging Temperature: Between 5°C and 40°C (41°F and 104°F) <br>
+
+        <b>Compatibility:</b> <br>
+        - DJI Avata 2 <br>
+      </p>
+    </div>
+
+  <div class="col-50">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMRXVe_N8JErOiYZEgo0NDRpg8Zf8a7RsRGYckFJh_lXFfs-rX" alt="">
+  </div>
+
+    <div class="col-50">
+        <p>
+         2 - Mini Intelligent Flight Battery - <b>$69</b> <br>
+        Offers a maximum flight autonomy of 34 minutes, allowing you to fly and create with peace of mind. <br>
+
+        <b>Package Contents:</b> <br>
+        - Intelligent flight battery × 1 <br>
+
+        <b>Technical Specifications:</b> <br>
+        - Model: BWX140-2590-7.32 <br>
+        - Weight: Approximately 77.9 g <br>
+        - Capacity: 2590 mAh <br>
+        - Nominal Voltage: 7.32 V <br> 
+        - Charging Voltage (max.): 8.6 V <br>
+        - Battery Type: Li-ion <br>
+        - Energy: 18.96 Wh <br> 
+        - Charging Time: 70 minutes (with DJI 30W USB-C charger and battery installed on the aircraft), 58 minutes (with DJI 30W USB-C charger and battery inserted in the Two-way charging hub) <br>
+        - Charging Temperature: From 5°C to 40°C <br> 
+        - Recommended Chargers: DJI 30W USB-C charger or other USB Power Delivery chargers <br>
+
+        <b>Compatibility:</b> <br>
+        - DJI Mini 4 Pro <br>
+        - DJI Mini 3 Pro <br>
+      </p>
+    </div>
+
+  <div class="col-50">
+    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTINI-lX61QSANFFAoI3e4-O2YfzktXTb1-1mE8IryC32tjDsfV" alt="">
+  </div>
+    
+    <div class="col-50">
+      <p>
+        3 - Base Ground Battery - <b>$39</b> <br>
+        The compact battery of DJI Goggles 2 powers the visor and comes with battery level indicators. When DJI Goggles 2 is used with DJI Avata, it can display the power level of the visor in real-time. When fully charged, the battery life is approximately 2 hours. <br> 
+
+        <b>Package Contents:</b> <br>
+        - Battery for DJI Goggles 2 × 1 <br> 
+
+        <b>Technical Specifications:</b> <br>
+        - Capacity: 1800 mAh <br>
+        - Voltage: 7-9 V (1.5 A) <br>
+        - Type: Li-ion <br> 
+        - Chemical System: LiNiMnCoO2 <br>
+        - Energy: 18 Wh <br>
+        - Charging Temperature: From 0°C to 45°C <br>
+        - Charging Power (max.): 12.6 W (5 V/2 A, 9 V/1.4 A) <br>
+        - Operating Time: Approximately 2 hours <br>
+
+        <b>Compatibility:</b> <br>
+        - DJI Goggles 2 <br>
+        - DJI FPV Goggles V2 <br>
+      </p>
+    </div>
+
+  <div class="col-50">
+    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSvuidLakHv-r1WHVD6wcarJvTMYIRj2J7dp0f_ZktCO9RSv2UB" alt="">
+  </div>
+      
+    <div class="col-50">
+      <p>
+        4- Intelligent Flight Battery 3.0 - <b>$139</b> <br>
+        The Mavic 2 Intelligent Flight Battery has a capacity of up to 59.29 Wh and offers a flight autonomy of up to 31 minutes. Thanks to the integrated DJI intelligent battery management system, the battery status is monitored in real-time, allowing you to worry less about battery levels and more about your fantastic flight. <br>
+
+        <b>Features:</b> <br>
+        - High-capacity LiPo cells <br>
+        - 31 minutes of flight <br>
+        - Various intelligent battery protection features <br>
+
+        <b>Package Contents:</b> <br>
+        - Intelligent flight battery × 1 <br>
+
+        <b>Specifications:</b> <br>
+        - Battery Type: Four-cell LiPo battery <br>
+        - Nominal Capacity: 3850 mAh, 59.29 Wh (typical value) <br>
+        - Nominal Voltage: 15.4 V <br>
+        - Limited Charging Voltage: 17.6 V <br>
+        - Charging Temperature: -10°C – 60°C <br>
+        - Discharge Temperature: 5°C – 40°C <br>
+
+        <b>Compatibility:</b> <br>
+        Mavic 2 Series <br>
+      </p> 
+  </div>
+
+  <div class="col-50">
+    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRshPTaYSOQS3SG5lCP8_qmfgRd5fFI6FNaTqBnIWp-vFlLRIbO" alt="">
+  </div>
+</div>
+
+<div class="grid">
+  <div class="col-100"  id="Controllers">
+    <div class="spacer"></div>
+    <h1>Controllers</h1>
+    <p>Controllers serve as the brain of the drone, managing its flight characteristics and navigation. They receive input from 
+        the pilot or onboard sensors and adjust the drone's motors accordingly. Advanced controllers offer features such as GPS 
+        navigation, altitude hold, and autonomous flight modes. <br>
+  </div>
+      <div class="col-50">
+        <p>
+          1-DJI FPV Remote Controller 2 - <b>$149</b> <br>
+          Best for DJI FPV drone users looking for a traditional, precise, and ergonomic controller. <br>
+          
+          <b>Features:</b> <br>
+          - Ergonomic design <br>
+          - Stick controls with Hall effect sensors for precise control <br>
+          - Optimized for use with DJI FPV systems <br>
+          - Provides a smooth and responsive control experience <br>
+          - Integration with DJI drones ensures compatibility and ease of use <br> <br>
+
+          Pros: Ergonomic design, precise Hall effect stick controls, seamless integration with DJI FPV drones. <br>
+          Cons: Limited to DJI FPV systems. <br> <br>
+        </p>
+      </div>
+
+      <div class="col-50">
+        <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTuTJz3Q8rmuA40E1PdIMeadXEyN3M1pAt8DqaLl6zVt1FimcbC" alt="">
+      </div>
+
+      <div class="col-50">
+        <p>
+          2-DJI Motion Controller - <b>$127</b> <br>
+          Ideal for beginners or those seeking an intuitive and immersive control experience with DJI FPV drones. <br>
+
+          <b>Features: </b> <br>
+          - Unique motion-based control system <br>
+          - Intuitive control experience by moving your hand <br>
+          - Optimized for use with DJI FPV drones <br>
+          - Lightweight and portable <br>
+          - Simplifies the flying experience, particularly for beginners <br>
+          - Great for immersive FPV flying <br> <br>
+
+          Pros: Intuitive motion-based control, very easy to use, especially for beginners, portable. <br>
+          Cons: Less precise for advanced maneuvers, limited to DJI FPV systems. <br> <br>
+        </p>
+      </div>
+        
+      <div class="col-50">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1XymjsVF_HrdMjKYn3k8DryxTloWxYLbyTvgdsifJ9VHcQEqN" alt="">
+      </div>
+
+      <div class="col-50">
+        <p>
+          3- RadioMaster TX16S Mark II V4.0 - <b>$239</b> <br>
+          Great for advanced users who need a versatile and customizable controller compatible with various RC models and protocols, not just limited to DJI products. <br> <br>
+
+          <b>Features:</b> <br>
+          - Hall Gimbal controls <br>
+          - 4-IN-1 module supporting multiple protocols (ELRS, and others) <br>
+          - Compatible with EdgeTX/OpenTX firmware <br>
+          - Built-in dual speakers <br>
+          - Mode 2 radio transmitter (throttle on the left) <br>
+          - High customization and flexibility for various RC applications <br>
+          - Large, full-color screen for easy configuration and telemetry display <br>
+          - Support for a wide range of RC drones and other vehicles <br> <br>
+
+          Pros: Highly customizable, supports multiple protocols, large screen, Hall Gimbals, compatible with EdgeTX/OpenTX, suitable for a wide range of RC vehicles. <br>
+          Cons: More expensive, potentially more complex setup and usage compared to DJI  <br>
+        </p>
+      </div>
+        
+      <div class="col-50">
+        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQhmly57_fuMwIpvis0zJVlIbownRDa5KaewsFTfuRxf9TwxHrL" alt="">
+      </div>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="col-100"  id="Cameras">
+    <div class="spacer"></div>
+    <h1>Cameras</h1>
+  </div>
+    <div class="col-100">
+      <p>Cameras are essential for capturing aerial footage and providing real-time video feeds for FPV (First Person View) flying. 
+        They come in various resolutions and specifications, including HD, 4K, and thermal imaging. The quality of the camera 
+        greatly influences the drone's ability to capture stunning imagery and perform tasks such as aerial surveying and 
+        cinematography.</p> <br>
+      <p>
+    </div>
+
+      <div class="col-50">
+        <p>
+          1-Zenmuse X7 (without lens) - <b>$1809</b> <br>
+          Best for professional photography and cinematography where image quality is paramount and cost is less of a concern. <br> <br>
+  
+          <b>Features: </b> <br>
+          - Professional-grade camera designed for high-end drone applications. <br>
+          - Typically paired with a variety of lenses (not included in the price). <br>
+          - Offers superior image quality and extensive post-processing flexibility. <br> <br>
+  
+          Pros: High-end, professional-quality imagery, extensive lens options. <br>
+          Cons: Very expensive, no lens included. <br> <br>  
+        </p>
+      </div>
+       
+      <div class="col-50">
+        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRseo8WHP9KIOIw010ZDy-B9ygZHS0Ewvh5OdOAKHSgiFl9zidL" alt="">
+      </div>
+
+      <div class="col-50">
+        <p>
+          2-A8 Mini Gimbal Camera 4K 8MP Ultra HD - <b>$360</b> <br>
+          Great for general-purpose drone use, especially where budget constraints are important, and some advanced tracking and gimbal features are needed. <br> <br>
+  
+          <b>Features:</b> <br>
+          - Video Output Port: Ethernet, HDMI, CVBS (AV) <br>
+          - Control Signal Input Port: S.Bus / UART / UDP <br>
+          - Control Signal Output Port: S.Bus <br>
+          - Working Voltage: 11 ~ 25.2 V <br>
+          - Power Consumption: Summit 12 W <br>
+          - Working Temperature: -10 ~ 50 ℃ <br>
+          - Dimensions: 55*55*70 mm <br>
+          - Weight: Approx. 95 g <br>
+          - Gimbal Specifications: <br>
+            - Angular Vibration Range: ±0.01° <br>
+            - Controllable Pitch Angle: -135° ~ +45° <br>
+            - Controllable Yaw Angle: -160° ~ +160° <br>
+            - Controllable Roll Angle: -30° ~ +30° <br>
+          - Camera Specifications: <br>
+            - Lens: 6X Digital <br>
+            - Focal Length: 21 mm <br>
+            - Image Sensor: Sony 1/1.7-inch, 8 MP effective resolution <br>
+            - Aperture: F2.8 <br>
+            - Field of View (FOV): 93° <br>
+          - Additional features include AI identify and tracking based on a neural network processing unit, and support for max 6X digital zoom. <br> <br>
+  
+          Pros: Affordable, versatile with multiple video outputs, AI-based tracking, lightweight, built-in gimbal stabilization. <br>
+          Cons: Lower resolution compared to Zenmuse X7, digital zoom instead of optical. <br> <br>  
+        </p>
+      </div>
+
+      <div class="col-50">
+        <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSn6n2teaTZusdTSL52QiBrHxTEUmjYjZTfMdCTdDIbfsq2Rz8C" alt="">
+      </div>
+
+      <div class="col-50">
+        <p>
+        3- DJI Goggles RE-OcuSync Camera - <b>$79</b> <br>
+        Ideal for FPV racing enthusiasts looking for an affordable, high-performance camera to pair with DJI Goggles. <br> <br>
+
+        <b>Features:</b> <br>
+        - Specifically designed for drone racing. <br>
+        - Sensor: 12 MP CMOS with Global Shutter. <br>
+        - Eliminates jello effect common in drone footage. <br>
+        - Video Quality: <br>
+          - 1280×960 at 50 fps <br>
+          - 1280×720 at 60 fps <br>
+          - 640×480 at 100 fps <br>
+        - Field of View (FOV): 148° <br>
+        - Works with the Air OcuSync unit to provide low-latency video downlink and recording capabilities. <br> <br>
+
+        Pros: Very affordable, excellent for FPV drone racing, high FOV, good for eliminating jello effect. <br>
+        Cons: Lower overall image quality compared to the other two options, specific to racing applications. <br>
+      </p>
+      </div>
+
+      <div class="col-50">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqi3G1wYJeqA3s5M1TSZDkrhvf9ynF66ClOlgnwUlvWHOwtyCf" alt="">
+      </div>
+    </div>
+    
+</div>
+
+<div class="spacer"></div>
+
+<script> 
+  let item = document.querySelector('.icon-hamburger');
+  item.addEventListener("click", function() {
+    document.body.classList.toggle('menu-open');
+  });
+</script>
+<script src="/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chart.js</title>
+  <link rel="stylesheet" href="/css/chart.css">
+  <link rel="stylesheet" href="/css/components.css">
+
+</head>
+
+<body>
+   <header class="header">
+      <div class="header__content">
+        <a class="header__logo" href="">
+          <strong>FEA</strong>
+        </a>
+        <ul class="header__menu">
+          <li><a href="index">Home</a></li>
+          <li><a href="#Aboutus">About Us</a></li>
+          <li><a href="#Assembled">Assembling Drones</a></li>
+          <li><a href="#Orders">Orders</a></li>
+          <li><a href="#Reviews">Reviews</a></li>
+  
+          <% if(!user) {%>
+            <li><a href="components">Components</a></li>
+            <% } %>
+  
+  
+  
+              <% if (user) { %>
+                <li><a href="add" id="add">Add</a></li>
+                <% } %>
+                  <% if (user) { %>
+                    <li><a href="order" id="order">Your Orders</a></li>
+                    <% } %>
+  
+                      <% if (user) {%>
+                        <li> <a href="statistic">Statistic</a></li>
+                        <% }%>
+                          <% if (user) { %>
+                            <li><a href="logout" id="logout">Logout</a></li>
+                            <% } %>
+  
+  
+  
+  
+        </ul>
+  
+  <div class="container">
+    <canvas id="chartId" aria-label="chart" height="350" width="580"></canvas>
+    
+    <h1></h1>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
+  <script>
+    var chrt = document.getElementById("chartId").getContext("2d");
+
+    // Access data from EJS template using JavaScript
+    const wing1  =  '<%=wing1%>'
+    const engine1 = '<%=engine1%>'  
+    const battery1 =  '<%=battery1%>'
+    const frame1 =  '<%=frame1%>'
+    const controller1 =  '<%=controller1%>'
+    const camera1 =  '<%=camera1%>'
+    const wing2  =  '<%=wing2%>'
+    const engine2 = '<%=engine2%>'  
+    const battery2 =  '<%=battery2%>'
+    const frame2 =  '<%=frame2%>'
+    const controller2 =  '<%=controller2%>'
+    const camera2 =  '<%=camera2%>'
+    const wing3  =  '<%=wing3%>'
+    const engine3 = '<%=engine3%>'  
+    const battery3 =  '<%=battery3%>'
+    const frame3 =  '<%=frame3%>'
+    const controller3 =  '<%=controller3%>'
+    const camera3 =  '<%=camera3%>'
+    const wing4  =  '<%=wing4%>'
+    const engine4 = '<%=engine4%>'  
+    const battery4 =  '<%=battery4%>'
+    const frame4 =  '<%=frame4%>'
+    const controller4 =  '<%=controller4%>'
+    const camera4 =  '<%=camera4%>'
+    var chartId = new Chart(chrt, {
+      type: 'doughnut',
+      data: {
+        labels: ["Wing1", "Wing2", "Wing3", "Wing4", "Battery1", "Battery2", "Battery3", "Battery4", "Controller1", "Controller2", "Controller3", "Controller4", "Frame1", "Frame2", "Frame3", "Frame4", "Camera1", "Camera2", "Camera3", "Camera4"],
+
+        datasets: [{
+          label: "Component Distribution",
+          data: [wing1, wing2,wing3,wing4,battery1,battery2,battery3,battery4 ,controller1, controller2, controller3, controller4,frame1,frame2,frame3,frame4,camera1,camera2,camera3,camera4],
+          backgroundColor: ['yellow', 'aqua', 'pink', 'lightgreen', 'gold', 'lightblue','green','blue','grey','orange','red','black'],
+          hoverOffset: 5
+        }],
+      },
+      options: {
+        responsive: false,
+      },
+    });
+  </script>
+</body>
+
+</html>

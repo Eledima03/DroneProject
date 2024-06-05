@@ -1,0 +1,82 @@
+h1 {
+    padding-top: 30px !important;
+    text-align: center;
+    font-size: 24px; /* Başlık font boyutunu küçültün */
+    color: #333; /* Yazı rengini ayarlayın */
+}
+
+.orders-container {
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%; /* Genişliği ayarlayın */
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.component-container {
+    width: calc(35% - 20px); /* İki sütun yapısı */
+    border: 1px solid transparent;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(229, 227, 227); /* Container rengini ayarlayın */
+    border-radius: 30px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+.component-container:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.item {
+    background-color: orange;
+    width: calc(33.33% - 10px); /* Üç sütun yapısı */
+    text-align: center;
+    margin-bottom: 10px;
+}
+.item:hover{
+    background-color: rebeccapurple;
+}
+
+.item img {
+    width: 80%; /* Resim genişliğini biraz büyütün */
+    height: auto; /* Resim boyutunu otomatik olarak ayarlayın */
+    display: block;
+    margin: 0 auto 10px auto; /* Ortalayın ve alt boşluk bırakın */
+    border-radius: 5px;
+}
+
+.item h2 {
+    font-size: 21px; /* Başlık font boyutunu biraz büyütün */
+    margin: 10px 0;
+}
+
+.item p {
+    font-size: 16px; /* Metin font boyutunu ayarlayın */
+}
+
+@media (max-width: 768px) {
+    .component-container {
+        width: 100%; /* Küçük ekranlarda tam genişlikte */
+    }
+    .item {
+        width: 100%; /* Küçük ekranlarda tam genişlikte */
+    }
+}
