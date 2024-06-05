@@ -27,11 +27,7 @@
 
   const user = await User.findOne({ email });
   if (!user) {
-<<<<<<< HEAD
     console.log("Email Wrong");
-=======
-    console.log("Email hatalı");
->>>>>>> 1169d3f63d3eac2b1e5a71a8da7609b1ced60d80
 
     return res.json({
       case: false,
@@ -43,22 +39,14 @@
   // Parolayı karşılaştırın
   const isMatch = await bcrypt.compare(password, user.password);
   if (!isMatch) {
-<<<<<<< HEAD
     console.log("Password Wrong");
-=======
-    console.log("Parola hatalı");
->>>>>>> 1169d3f63d3eac2b1e5a71a8da7609b1ced60d80
     return res.json({
       case: false,
       message: "Wrong email or password"
     });
   }
   req.session.userId=user._id.toString();
-<<<<<<< HEAD
   
-=======
-  console.log(user);
->>>>>>> 1169d3f63d3eac2b1e5a71a8da7609b1ced60d80
   return res.json({
     case: true,
     message: "Login successful"

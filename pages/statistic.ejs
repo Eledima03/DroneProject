@@ -40,11 +40,7 @@
                         <li> <a href="statistic">Statistic</a></li>
                         <% }%>
                           <% if (user) { %>
-<<<<<<< HEAD
                             <li><a href="logout" id="logout">Logout</a></li>
-=======
-                            <li><a href="logout" id="logout">logout</a></li>
->>>>>>> 1169d3f63d3eac2b1e5a71a8da7609b1ced60d80
                             <% } %>
   
   
@@ -65,7 +61,6 @@
     const wing1  =  '<%=wing1%>'
     const engine1 = '<%=engine1%>'  
     const battery1 =  '<%=battery1%>'
-<<<<<<< HEAD
     const frame1 =  '<%=frame1%>'
     const controller1 =  '<%=controller1%>'
     const camera1 =  '<%=camera1%>'
@@ -95,25 +90,6 @@
         datasets: [{
           label: "Component Distribution",
           data: [wing1, wing2,wing3,wing4,battery1,battery2,battery3,battery4 ,controller1, controller2, controller3, controller4,frame1,frame2,frame3,frame4,camera1,camera2,camera3,camera4],
-=======
-    const wing2  =  '<%=wing2%>'
-    const engine2 = '<%=engine2%>'  
-    const battery2 =  '<%=battery2%>'
-    const wing3  =  '<%=wing3%>'
-    const engine3 = '<%=engine3%>'  
-    const battery3 =  '<%=battery3%>'
-    const wing4  =  '<%=wing4%>'
-    const engine4 = '<%=engine4%>'  
-    const battery4 =  '<%=battery4%>'
-    var chartId = new Chart(chrt, {
-      type: 'doughnut',
-      data: {
-        labels: ["Wing1", "Wing2","Wing3","Wing4","Engine1", "Engine2","Engine3","Engine4"
-        ,"Battery1","Battery2","Battery3","Battery4"],
-        datasets: [{
-          label: "Component Distribution",
-          data: [wing1, wing2,wing3,wing4,engine1,engine2,engine3,engine4 ,battery1, battery2, battery3, battery4],
->>>>>>> 1169d3f63d3eac2b1e5a71a8da7609b1ced60d80
           backgroundColor: ['yellow', 'aqua', 'pink', 'lightgreen', 'gold', 'lightblue','green','blue','grey','orange','red','black'],
           hoverOffset: 5
         }],
